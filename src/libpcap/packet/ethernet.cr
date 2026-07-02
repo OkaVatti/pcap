@@ -33,8 +33,9 @@ module LibPcap
       @data[14..]
     end
 
+    # In `mac_to_s`, use short block notation:
     private def mac_to_s(bytes : Bytes) : String
-      bytes.map { |b| b.to_s(16).rjust(2, '0') }.join(":")
+      bytes.map(&.to_s(16).rjust(2, '0')).join(":")
     end
   end
 end

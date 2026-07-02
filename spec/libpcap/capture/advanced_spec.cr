@@ -48,7 +48,7 @@ private def get_live_handle : LibPcap::PcapHandle
     handle.snaplen = 65536
     handle.timeout_ms = 100
     handle.activate
-    return handle
+    handle
   rescue
     # If all fail, raise a clear error
     raise "No usable network interface found for live capture"
@@ -193,13 +193,13 @@ describe "Advanced features" do
       handle = LibPcap::PcapHandle.for_offline(path)
 
       loop_count = 0
-      handle.loop(count: 1) do |packet|
+      handle.loop(count: 1) do |_|
         loop_count += 1
       end
 
       dispatch_count = 0
       handle2 = LibPcap::PcapHandle.for_offline(path)
-      handle2.dispatch(count: 1) do |packet|
+      handle2.dispatch(count: 1) do |_|
         dispatch_count += 1
       end
       dispatch_count.should eq(loop_count)
@@ -213,7 +213,7 @@ describe "Advanced features" do
       path = create_empty_pcap
       handle = LibPcap::PcapHandle.for_offline(path)
       count = 0
-      handle.dispatch(count: 0) do |packet|
+      handle.dispatch(count: 0) do |_|
         count += 1
       end
       count.should eq(0)
@@ -251,7 +251,7 @@ describe "Advanced features" do
     it "sets a valid timestamp type" do
       handle = get_live_handle
       types = handle.tstamp_types
-      if types.any?
+      unless types.empty?
         begin
           handle.tstamp_type = types.first
         rescue LibPcap::ConfigurationError

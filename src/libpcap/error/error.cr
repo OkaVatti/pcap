@@ -88,13 +88,12 @@ module LibPcap
     # Uses if-elsif with explicit type checks for proper type narrowing.
     def unwrap! : T
       if ok?
-        @value.not_nil!
+        @value.as(T)
       elsif eof?
         raise Error.new("Unexpected EOF, expected packet")
       elsif error?
         raise @error.as(Error)
       else
-        # This should never happen, but keeps the compiler happy
         raise Error.new("Unknown Result state")
       end
     end

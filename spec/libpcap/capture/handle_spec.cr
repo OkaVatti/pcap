@@ -48,7 +48,7 @@ describe LibPcap::PcapHandle do
     path = create_test_pcap
     handle = LibPcap::PcapHandle.for_offline(path)
     count = 0
-    handle.loop(count: 5) do |packet|
+    handle.loop(count: 5) do |_|
       count += 1
     end
     count.should eq(1) # only one packet in the file

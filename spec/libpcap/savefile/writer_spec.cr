@@ -23,10 +23,10 @@ describe LibPcap::SavefileWriter do
     # Read back
     reader = LibPcap::SavefileReader.new(path)
     count = 0
-    reader.each_packet do |p|
+    reader.each_packet do |packet|
       count += 1
-      p.len.should eq(packet.len)
-      p.timestamp.should eq(packet.timestamp)
+      packet.len.should eq(packet.len)
+      packet.timestamp.should eq(packet.timestamp)
     end
     count.should eq(1)
     reader.close
@@ -44,7 +44,7 @@ describe LibPcap::SavefileWriter do
     writer = LibPcap::SavefileWriter.new(handle, path)
 
     count = 0
-    writer.capture_loop do |packet|
+    writer.capture_loop do |_|
       count += 1
       false
     end

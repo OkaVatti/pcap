@@ -188,17 +188,18 @@ module LibPcap
     # ------------------------------------------------------------
 
     # Returns a human‑readable description.
+    # In `to_s`, change `|f|` to `|io|`
     def to_s(io : IO) : Nil
       io << "TCP " << src_port << " -> " << dst_port
       io << " seq=" << seq_num
       io << " ack=" << ack_num if ack?
-      flags_str = String.build do |f|
-        f << "SYN " if syn?
-        f << "ACK " if ack?
-        f << "FIN " if fin?
-        f << "RST " if rst?
-        f << "PSH " if psh?
-        f << "URG " if urg?
+      flags_str = String.build do |str|
+        str << "SYN " if syn?
+        str << "ACK " if ack?
+        str << "FIN " if fin?
+        str << "RST " if rst?
+        str << "PSH " if psh?
+        str << "URG " if urg?
       end
       io << " flags={" << flags_str.strip << "}" unless flags_str.empty?
     end
