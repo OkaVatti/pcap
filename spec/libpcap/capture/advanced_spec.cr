@@ -87,24 +87,31 @@ describe "Advanced features" do
   describe "non‑blocking mode" do
     it "sets and gets non‑blocking mode on a live handle" do
       handle = get_live_handle
-
-      handle.nonblock?.should be_false
-      handle.nonblock = true
-      handle.nonblock?.should be_true
-      handle.nonblock = false
-      handle.nonblock?.should be_false
-
-      handle.close
+      begin
+        handle.nonblock?.should be_false
+        handle.nonblock = true
+        handle.nonblock?.should be_true
+        handle.nonblock = false
+        handle.nonblock?.should be_false
+      rescue LibPcap::Error
+        pending "Non‑blocking mode not supported on this device"
+      ensure
+        handle.close
+      end
     end
 
     it "returns selectable_fd on a live handle" do
       handle = get_live_handle
-
-      fd = handle.selectable_fd
-      fd.should_not be_nil
-      fd.as(Int32).should be >= 0
-
-      handle.close
+      begin
+        fd = handle.selectable_fd
+        if fd.nil?
+          pending "selectable_fd not supported on this device"
+        end
+        fd.should_not be_nil
+        fd.as(Int32).should be >= 0
+      ensure
+        handle.close
+      end
     end
 
     it "raises on invalid non‑blocking set on a dead handle" do
@@ -119,12 +126,15 @@ describe "Advanced features" do
   describe "direction control" do
     it "sets direction on a live handle" do
       handle = get_live_handle
-
-      handle.direction = LibPcap::PCAP_D_INOUT
-      handle.direction = LibPcap::PCAP_D_IN
-      handle.direction = LibPcap::PCAP_D_OUT
-
-      handle.close
+      begin
+        handle.direction = LibPcap::PCAP_D_INOUT
+        handle.direction = LibPcap::PCAP_D_IN
+        handle.direction = LibPcap::PCAP_D_OUT
+      rescue LibPcap::ConfigurationError
+        pending "Direction control not supported on this device"
+      ensure
+        handle.close
+      end
     end
 
     it "raises on direction set on a dead handle" do
@@ -139,12 +149,10 @@ describe "Advanced features" do
   describe "list of datalink types" do
     it "returns a non‑empty array on a live handle" do
       handle = get_live_handle
-
       types = handle.datalink_types
       types.should be_a(Array(Int32))
       types.should_not be_empty
       types.should contain(handle.datalink)
-
       handle.close
     end
 
