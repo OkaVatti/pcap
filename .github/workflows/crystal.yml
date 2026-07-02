@@ -1,0 +1,78 @@
+name: CI
+
+on:
+  push:
+    branches: [mother]
+  pull_request:
+    branches: [mother]
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        crystal:
+          - latest
+          - 1.20.2 # minimum supported version
+          - 1.21.2
+          - 1.22.0
+        include:
+          - os: ubuntu-latest
+            libpcap-dev: libpcap-dev
+          - os: macos-latest
+            libpcap-dev: libpcap # Homebrew package
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+
+      - name: Install Crystal
+        uses: crystal-lang/install-crystal@v1
+        with:
+          crystal: ${{ matrix.crystal }}
+
+      - name: Install libpcap (Ubuntu)
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y ${{ matrix.libpcap-dev }}
+
+      - name: Install libpcap (macOS)
+        if: runner.os == 'macOS'
+        run: brew install ${{ matrix.libpcap-dev }}
+
+      - name: Show Crystal version
+        run: crystal --version
+
+      - name: Install shard dependencies
+        run: shards install
+
+      - name: Run linter (Ameba)
+        run: |
+          if shards list | grep -q ameba; then
+            bin/ameba
+          else
+            echo "Ameba not installed; skipping lint."
+          fi
+
+      - name: Run tests (without live devices)
+        run: crystal spec
+
+      - name: Build in debug mode
+        run: crystal build src/libpcap.cr --error-trace
+
+      - name: Build in release mode
+        run: crystal build src/libpcap.cr --release --error-trace
+
+      - name: Build with -D remote
+        run: crystal build src/libpcap.cr -D remote --error-trace
+
+      - name: Build with -D protocol
+        run: crystal build src/libpcap.cr -D protocol --error-trace
+
+      - name: Build with -D remote -D protocol
+        run: crystal build src/libpcap.cr -D remote -D protocol --error-trace
+
+      - name: Generate documentation
+        run: crystal docs
