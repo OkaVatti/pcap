@@ -163,7 +163,7 @@ module LibPcap
         box.call(hdr, bytes)
       }
 
-      rc = LibPcap::C.loop(@ptr, count.to_i32, callback, @callback_box.not_nil!.as(UInt8*))
+      rc = LibPcap::C.loop(@ptr, count.to_i32, callback, @callback_box.not_nil!.as(UInt8*)) # ameba:disable Lint/NotNil
 
       # Clear the box reference after the loop ends.
       @callback_box = nil
