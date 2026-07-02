@@ -2,9 +2,13 @@ name: CI
 
 on:
   push:
-    branches: [mother]
+    branches: [main, master, develop, mother]
   pull_request:
-    branches: [mother]
+    branches: [main, master, mother]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   test:
@@ -14,20 +18,25 @@ jobs:
         os: [ubuntu-latest, macos-latest]
         crystal:
           - latest
-          - 1.20.2 # minimum supported version
+          - 1.20.2
           - 1.21.2
           - 1.22.0
         include:
           - os: ubuntu-latest
-            libpcap-dev: libpcap-dev
+            libpcap-pkg: libpcap-dev
+            # Linux-only: test optional features with extra flags
+            extra-flags: >
+              -D remote
+              -D protocol
           - os: macos-latest
-            libpcap-dev: libpcap # Homebrew package
+            libpcap-pkg: libpcap
+            extra-flags: ""
 
     runs-on: ${{ matrix.os }}
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v7
+        uses: actions/checkout@v6
 
       - name: Install Crystal
         uses: crystal-lang/install-crystal@v1
@@ -36,19 +45,30 @@ jobs:
 
       - name: Install libpcap (Ubuntu)
         if: runner.os == 'Linux'
-        run: sudo apt-get update && sudo apt-get install -y ${{ matrix.libpcap-dev }}
+        run: sudo apt-get update && sudo apt-get install -y ${{ matrix.libpcap-pkg }}
 
       - name: Install libpcap (macOS)
         if: runner.os == 'macOS'
-        run: brew install ${{ matrix.libpcap-dev }}
+        run: brew install ${{ matrix.libpcap-pkg }}
 
-      - name: Show Crystal version
-        run: crystal --version
+      - name: Show versions
+        run: |
+          crystal --version
+          shards --version
+
+      - name: Cache shards
+        uses: actions/cache@v4
+        with:
+          path: ./lib
+          key: shards-${{ runner.os }}-${{ matrix.crystal }}-${{ hashFiles('shard.lock') }}
+          restore-keys: |
+            shards-${{ runner.os }}-${{ matrix.crystal }}-
+            shards-${{ runner.os }}-
 
       - name: Install shard dependencies
         run: shards install
 
-      - name: Run linter (Ameba)
+      - name: Lint with Ameba
         run: |
           if shards list | grep -q ameba; then
             bin/ameba
@@ -56,23 +76,32 @@ jobs:
             echo "Ameba not installed; skipping lint."
           fi
 
-      - name: Run tests (without live devices)
+      - name: Run tests (offline)
         run: crystal spec
 
-      - name: Build in debug mode
+      - name: Build (debug)
         run: crystal build src/libpcap.cr --error-trace
 
-      - name: Build in release mode
+      - name: Build (release)
         run: crystal build src/libpcap.cr --release --error-trace
 
-      - name: Build with -D remote
-        run: crystal build src/libpcap.cr -D remote --error-trace
+      - name: Build with optional flags (Linux only)
+        if: runner.os == 'Linux'
+        run: crystal build src/libpcap.cr ${{ matrix.extra-flags }} --error-trace
 
-      - name: Build with -D protocol
-        run: crystal build src/libpcap.cr -D protocol --error-trace
-
-      - name: Build with -D remote -D protocol
-        run: crystal build src/libpcap.cr -D remote -D protocol --error-trace
-
-      - name: Generate documentation
+      - name: Generate API documentation
         run: crystal docs
+
+      - name: Run live‑device tests (Linux only)
+        if: runner.os == 'Linux'
+        run: |
+          # Set up a dummy network interface for live tests
+          sudo modprobe dummy || true
+          sudo ip link add dummy0 type dummy || true
+          sudo ip link set dummy0 up || true
+
+          # Run specs with live device tests enabled
+          TEST_LIVE=1 crystal spec
+
+          # Clean up
+          sudo ip link delete dummy0 || true
