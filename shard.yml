@@ -1,15 +1,22 @@
 name: pcap
 version: 0.1.0
-description: Crystal bindings for libpcap — packet capture, BPF filtering, and pcap savefile reading/writing.
-
+description: Crystal FFI bindings for libpcap — live packet capture, BPF filtering, savefile reading/writing, and packet injection.
 authors:
   - OkaVatti <okavatti@proton.me>
-
 crystal: ">= 1.20.2"
+license: MIT
+repository: https://github.com/OkaVatti/pcap
+documentation: https://github.com/OkaVatti/pcap/tree/main/docs
+keywords:
+  - pcap
+  - libpcap
+  - packet
+  - capture
+  - network
+  - filtering
+  - tcpdump
 
 development_dependencies:
   ameba:
     github: crystal-ameba/ameba
     version: ~> 1.0
-
-license: MIT

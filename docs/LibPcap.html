@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.20.1">
+<meta name="crystal_docs.project_version" content="mother">
+<meta name="crystal_docs.project_name" content="pcap">
+
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/doc.js"></script>
+
+  <meta name="repository-name" content="pcap">
+  <title>LibPcap - pcap mother</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="index.html">
+          pcap
+        </a>
+      </h1>
+
+      <span class="project-version">
+        mother
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="pcap/LibPcap" data-name="libpcap">
+      <a href="LibPcap.html">LibPcap</a>
+      
+        <ul>
+  
+  <li class=" " data-id="pcap/LibPcap/ActivationError" data-name="libpcap::activationerror">
+      <a href="LibPcap/ActivationError.html">ActivationError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/BpfInsn" data-name="libpcap::bpfinsn">
+      <a href="LibPcap/BpfInsn.html">BpfInsn</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/BpfProgram" data-name="libpcap::bpfprogram">
+      <a href="LibPcap/BpfProgram.html">BpfProgram</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/BreakLoopError" data-name="libpcap::breaklooperror">
+      <a href="LibPcap/BreakLoopError.html">BreakLoopError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/ConfigurationError" data-name="libpcap::configurationerror">
+      <a href="LibPcap/ConfigurationError.html">ConfigurationError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/CrystalPacketHandler" data-name="libpcap::crystalpackethandler">
+      <a href="LibPcap/CrystalPacketHandler.html">CrystalPacketHandler</a>
+      
+    </li>
+  
+  <li class="parent " data-id="pcap/LibPcap/Device" data-name="libpcap::device">
+      <a href="LibPcap/Device.html">Device</a>
+      
+        <ul>
+  
+  <li class=" " data-id="pcap/LibPcap/Device/Address" data-name="libpcap::device::address">
+      <a href="LibPcap/Device/Address.html">Address</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/DumperError" data-name="libpcap::dumpererror">
+      <a href="LibPcap/DumperError.html">DumperError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/Error" data-name="libpcap::error">
+      <a href="LibPcap/Error.html">Error</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/EthernetHeader" data-name="libpcap::ethernetheader">
+      <a href="LibPcap/EthernetHeader.html">EthernetHeader</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/FilterError" data-name="libpcap::filtererror">
+      <a href="LibPcap/FilterError.html">FilterError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/IPv4Header" data-name="libpcap::ipv4header">
+      <a href="LibPcap/IPv4Header.html">IPv4Header</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/IPv4ParseError" data-name="libpcap::ipv4parseerror">
+      <a href="LibPcap/IPv4ParseError.html">IPv4ParseError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/OpenError" data-name="libpcap::openerror">
+      <a href="LibPcap/OpenError.html">OpenError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/Packet" data-name="libpcap::packet">
+      <a href="LibPcap/Packet.html">Packet</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapAddr" data-name="libpcap::pcapaddr">
+      <a href="LibPcap/PcapAddr.html">PcapAddr</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapDumper" data-name="libpcap::pcapdumper">
+      <a href="LibPcap/PcapDumper.html">PcapDumper</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapDumperPtr" data-name="libpcap::pcapdumperptr">
+      <a href="LibPcap/PcapDumperPtr.html">PcapDumperPtr</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapDumperT" data-name="libpcap::pcapdumpert">
+      <a href="LibPcap/PcapDumperT.html">PcapDumperT</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapHandle" data-name="libpcap::pcaphandle">
+      <a href="LibPcap/PcapHandle.html">PcapHandle</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapHandler" data-name="libpcap::pcaphandler">
+      <a href="LibPcap/PcapHandler.html">PcapHandler</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapIf" data-name="libpcap::pcapif">
+      <a href="LibPcap/PcapIf.html">PcapIf</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapPkthdr" data-name="libpcap::pcappkthdr">
+      <a href="LibPcap/PcapPkthdr.html">PcapPkthdr</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapPtr" data-name="libpcap::pcapptr">
+      <a href="LibPcap/PcapPtr.html">PcapPtr</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapRmtauth" data-name="libpcap::pcaprmtauth">
+      <a href="LibPcap/PcapRmtauth.html">PcapRmtauth</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapStat" data-name="libpcap::pcapstat">
+      <a href="LibPcap/PcapStat.html">PcapStat</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapT" data-name="libpcap::pcapt">
+      <a href="LibPcap/PcapT.html">PcapT</a>
+      
+    </li>
+  
+  <li class="parent " data-id="pcap/LibPcap/Result" data-name="libpcap::result(t)">
+      <a href="LibPcap/Result.html">Result</a>
+      
+        <ul>
+  
+  <li class=" " data-id="pcap/LibPcap/Result/Kind" data-name="libpcap::result::kind">
+      <a href="LibPcap/Result/Kind.html">Kind</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/SavefileReader" data-name="libpcap::savefilereader">
+      <a href="LibPcap/SavefileReader.html">SavefileReader</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/SavefileWriter" data-name="libpcap::savefilewriter">
+      <a href="LibPcap/SavefileWriter.html">SavefileWriter</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/TCPHeader" data-name="libpcap::tcpheader">
+      <a href="LibPcap/TCPHeader.html">TCPHeader</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/TCPParseError" data-name="libpcap::tcpparseerror">
+      <a href="LibPcap/TCPParseError.html">TCPParseError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/TimeoutError" data-name="libpcap::timeouterror">
+      <a href="LibPcap/TimeoutError.html">TimeoutError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/UDPHeader" data-name="libpcap::udpheader">
+      <a href="LibPcap/UDPHeader.html">UDPHeader</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/UDPParseError" data-name="libpcap::udpparseerror">
+      <a href="LibPcap/UDPParseError.html">UDPParseError</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">
+    module
+  </span> LibPcap
+
+</h1>
+
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>The main namespace for all libpcap functionality.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap.cr#L17" target="_blank">
+        libpcap.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/device.cr#L7" target="_blank">
+        libpcap/capture/device.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L14" target="_blank">
+        libpcap/capture/handle.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/error/error.cr#L5" target="_blank">
+        libpcap/error/error.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/lib/lib_pcap.cr#L10" target="_blank">
+        libpcap/lib/lib_pcap.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/lib/lib_pcap/callbacks.cr#L7" target="_blank">
+        libpcap/lib/lib_pcap/callbacks.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/lib/lib_pcap/constants.cr#L6" target="_blank">
+        libpcap/lib/lib_pcap/constants.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/lib/lib_pcap/structs.cr#L5" target="_blank">
+        libpcap/lib/lib_pcap/structs.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/packet/ethernet.cr#L4" target="_blank">
+        libpcap/packet/ethernet.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/packet/ipv4.cr#L5" target="_blank">
+        libpcap/packet/ipv4.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/packet/packet.cr#L7" target="_blank">
+        libpcap/packet/packet.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/packet/tcp.cr#L5" target="_blank">
+        libpcap/packet/tcp.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/packet/udp.cr#L5" target="_blank">
+        libpcap/packet/udp.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/savefile/dumper.cr#L7" target="_blank">
+        libpcap/savefile/dumper.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/savefile/reader.cr#L7" target="_blank">
+        libpcap/savefile/reader.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/savefile/writer.cr#L8" target="_blank">
+        libpcap/savefile/writer.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/version.cr#L2" target="_blank">
+        libpcap/version.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>
+      <a id="constant-summary" class="anchor" href="#constant-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Constant Summary
+    </h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="DLT_ARCNET">
+        <strong>DLT_ARCNET</strong> = <code><span class="n">7</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="DLT_ATM_RFC1483">
+        <strong>DLT_ATM_RFC1483</strong> = <code><span class="n">11</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="DLT_AX25">
+        <strong>DLT_AX25</strong> = <code><span class="n">3</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="DLT_CHAOS">
+        <strong>DLT_CHAOS</strong> = <code><span class="n">5</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="DLT_EN10MB">
+        <strong>DLT_EN10MB</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="DLT_EN3MB">
+        <strong>DLT_EN3MB</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="DLT_FDDI">
+        <strong>DLT_FDDI</strong> = <code><span class="n">10</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="DLT_IEEE802">
+        <strong>DLT_IEEE802</strong> = <code><span class="n">6</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="DLT_IEEE802_11">
+        <strong>DLT_IEEE802_11</strong> = <code><span class="n">105</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="DLT_IPV4">
+        <strong>DLT_IPV4</strong> = <code><span class="n">228</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="DLT_IPV6">
+        <strong>DLT_IPV6</strong> = <code><span class="n">229</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="DLT_LINUX_SLL">
+        <strong>DLT_LINUX_SLL</strong> = <code><span class="n">113</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="DLT_MPLS">
+        <strong>DLT_MPLS</strong> = <code><span class="n">234</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="DLT_NULL">
+        <strong>DLT_NULL</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Common Data Link Types (DLT_*)</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="DLT_PPP">
+        <strong>DLT_PPP</strong> = <code><span class="n">9</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="DLT_PPP_BSDOS">
+        <strong>DLT_PPP_BSDOS</strong> = <code><span class="n">14</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="DLT_PRONET">
+        <strong>DLT_PRONET</strong> = <code><span class="n">4</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="DLT_RAW">
+        <strong>DLT_RAW</strong> = <code><span class="n">12</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="DLT_SLIP">
+        <strong>DLT_SLIP</strong> = <code><span class="n">8</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="DLT_SLIP_BSDOS">
+        <strong>DLT_SLIP_BSDOS</strong> = <code><span class="n">13</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="PCAP_D_IN">
+        <strong>PCAP_D_IN</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <hr />
+<h2><a id="direction-for-pcap-setdirection" class="anchor" href="#direction-for-pcap-setdirection">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Direction (for <code>pcap_setdirection</code>)</h2>
+      </dd>
+      
+    
+      <dt class="entry-const" id="PCAP_D_INOUT">
+        <strong>PCAP_D_INOUT</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="PCAP_D_OUT">
+        <strong>PCAP_D_OUT</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="PCAP_ERRBUF_SIZE">
+        <strong>PCAP_ERRBUF_SIZE</strong> = <code><span class="n">256</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Size of the error buffer used by libpcap functions.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="PCAP_NEXT_EX_EOF">
+        <strong>PCAP_NEXT_EX_EOF</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="PCAP_NEXT_EX_ERROR">
+        <strong>PCAP_NEXT_EX_ERROR</strong> = <code><span class="n">-1</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="PCAP_NEXT_EX_OK">
+        <strong>PCAP_NEXT_EX_OK</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Return values for <code>pcap_next_ex</code></p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="PCAP_OPENFLAG_DATATX_UDP">
+        <strong>PCAP_OPENFLAG_DATATX_UDP</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="PCAP_OPENFLAG_MAX_RESPONSIVENESS">
+        <strong>PCAP_OPENFLAG_MAX_RESPONSIVENESS</strong> = <code><span class="n">16</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="PCAP_OPENFLAG_NOCAPTURE_LOCAL">
+        <strong>PCAP_OPENFLAG_NOCAPTURE_LOCAL</strong> = <code><span class="n">8</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="PCAP_OPENFLAG_NOCAPTURE_RPCAP">
+        <strong>PCAP_OPENFLAG_NOCAPTURE_RPCAP</strong> = <code><span class="n">4</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="PCAP_OPENFLAG_PROMISCUOUS">
+        <strong>PCAP_OPENFLAG_PROMISCUOUS</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <hr />
+<h2><a id="remote-capture-flags-for-pcap-opentaken-from-pcapremote-ext.h" class="anchor" href="#remote-capture-flags-for-pcap-opentaken-from-pcapremote-ext.h">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Remote capture flags (for <code>pcap_open</code>)
+(taken from &lt;pcap/remote-ext.h&gt;)</h2>
+      </dd>
+      
+    
+      <dt class="entry-const" id="PCAP_PROMISCUOUS">
+        <strong>PCAP_PROMISCUOUS</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Promiscuous mode flag for <code>pcap_set_promisc</code>.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="PCAP_PROTOCOL_ETHERNET">
+        <strong>PCAP_PROTOCOL_ETHERNET</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="PCAP_PROTOCOL_LINUX_SLL2">
+        <strong>PCAP_PROTOCOL_LINUX_SLL2</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="PCAP_PROTOCOL_UNKNOWN">
+        <strong>PCAP_PROTOCOL_UNKNOWN</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <hr />
+<h2><a id="protocols-for-pcap-set-protocol-linuxspecific-for-dlt-linux-sll2" class="anchor" href="#protocols-for-pcap-set-protocol-linuxspecific-for-dlt-linux-sll2">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Protocols for <code>pcap_set_protocol</code> (Linux‑specific, for DLT_LINUX_SLL2)</h2>
+      </dd>
+      
+    
+      <dt class="entry-const" id="PCAP_RMTAUTH_NULL">
+        <strong>PCAP_RMTAUTH_NULL</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Remote authentication types</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="PCAP_RMTAUTH_PWD">
+        <strong>PCAP_RMTAUTH_PWD</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="PCAP_TIMEOUT_DEFAULT">
+        <strong>PCAP_TIMEOUT_DEFAULT</strong> = <code><span class="n">1000</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Timeout value for <code>pcap_set_timeout</code> (milliseconds)</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="PCAP_TSTAMP_ADAPTER">
+        <strong>PCAP_TSTAMP_ADAPTER</strong> = <code><span class="n">3</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="PCAP_TSTAMP_ADAPTER_UNSYNCED">
+        <strong>PCAP_TSTAMP_ADAPTER_UNSYNCED</strong> = <code><span class="n">4</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="PCAP_TSTAMP_HOST">
+        <strong>PCAP_TSTAMP_HOST</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <hr />
+<h2><a id="timestamp-types-for-pcap-set-tstamp-type-and-pcap-list-tstamp-typesfrom-pcap.h" class="anchor" href="#timestamp-types-for-pcap-set-tstamp-type-and-pcap-list-tstamp-typesfrom-pcap.h">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Timestamp types (for <code>pcap_set_tstamp_type</code> and <code>pcap_list_tstamp_types</code>)
+(from &lt;pcap.h&gt;)</h2>
+      </dd>
+      
+    
+      <dt class="entry-const" id="PCAP_TSTAMP_HOST_HIPREC">
+        <strong>PCAP_TSTAMP_HOST_HIPREC</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="PCAP_TSTAMP_HOST_LOWPREC">
+        <strong>PCAP_TSTAMP_HOST_LOWPREC</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="PCAP_TSTAMP_PRECISION_MICRO">
+        <strong>PCAP_TSTAMP_PRECISION_MICRO</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <hr />
+<h2><a id="timestamp-precision-for-pcap-set-tstamp-precision" class="anchor" href="#timestamp-precision-for-pcap-set-tstamp-precision">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Timestamp precision (for <code>pcap_set_tstamp_precision</code>)</h2>
+      </dd>
+      
+    
+      <dt class="entry-const" id="PCAP_TSTAMP_PRECISION_NANO">
+        <strong>PCAP_TSTAMP_PRECISION_NANO</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VERSION">
+        <strong>VERSION</strong> = <code><span class="s">&quot;0.1.0&quot;</span></code>
+      </dt>
+      
+    
+  </dl>
+
+
+
+  
+
+  
+  <h2>
+    <a id="class-method-summary" class="anchor" href="#class-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#create_writer%28handle%3APcapHandle%2Cfilename%3AString%29%3ASavefileWriter-class-method" class="signature"><strong>.create_writer</strong>(handle : PcapHandle, filename : String) : SavefileWriter</a>
+        
+          <div class="summary"><p>Create a savefile writer.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#init%28optimization%3AInt32%3D0%29%3ANil-class-method" class="signature"><strong>.init</strong>(optimization : Int32 = <span class="n">0</span>) : Nil</a>
+        
+          <div class="summary"><p>Initialise libpcap globally (optional).</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#open_offline%28path%3AString%29%3ASavefileReader-class-method" class="signature"><strong>.open_offline</strong>(path : String) : SavefileReader</a>
+        
+          <div class="summary"><p>Open a savefile for reading.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#version%3AString-class-method" class="signature"><strong>.version</strong> : String</a>
+        
+          <div class="summary"><p>A convenient alias for the version string.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+  
+
+  
+
+
+  <div class="methods-inherited">
+    
+  </div>
+
+  
+
+  
+  <h2>
+    <a id="class-method-detail" class="anchor" href="#class-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="create_writer(handle:PcapHandle,filename:String):SavefileWriter-class-method">
+      <div class="signature">
+        
+        def self.<strong>create_writer</strong>(handle : <a href="LibPcap/PcapHandle.html">PcapHandle</a>, filename : String) : <a href="LibPcap/SavefileWriter.html">SavefileWriter</a>
+
+        <a class="method-permalink" href="#create_writer%28handle%3APcapHandle%2Cfilename%3AString%29%3ASavefileWriter-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Create a savefile writer.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap.cr#L38" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="init(optimization:Int32=0):Nil-class-method">
+      <div class="signature">
+        
+        def self.<strong>init</strong>(optimization : Int32 = <span class="n">0</span>) : Nil
+
+        <a class="method-permalink" href="#init%28optimization%3AInt32%3D0%29%3ANil-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Initialise libpcap globally (optional).
+Usually not needed, but provided for completeness.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap.cr#L25" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="open_offline(path:String):SavefileReader-class-method">
+      <div class="signature">
+        
+        def self.<strong>open_offline</strong>(path : String) : <a href="LibPcap/SavefileReader.html">SavefileReader</a>
+
+        <a class="method-permalink" href="#open_offline%28path%3AString%29%3ASavefileReader-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Open a savefile for reading.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap.cr#L33" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="version:String-class-method">
+      <div class="signature">
+        
+        def self.<strong>version</strong> : String
+
+        <a class="method-permalink" href="#version%3AString-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>A convenient alias for the version string.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap.cr#L19" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+  
+
+  
+
+
+</div>
+
+</body>
+</html>

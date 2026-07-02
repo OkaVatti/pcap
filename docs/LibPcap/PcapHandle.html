@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.20.1">
+<meta name="crystal_docs.project_version" content="mother">
+<meta name="crystal_docs.project_name" content="pcap">
+
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+  <meta name="repository-name" content="pcap">
+  <title>LibPcap::PcapHandle - pcap mother</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          pcap
+        </a>
+      </h1>
+
+      <span class="project-version">
+        mother
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="pcap/LibPcap" data-name="libpcap">
+      <a href="../LibPcap.html">LibPcap</a>
+      
+        <ul>
+  
+  <li class=" " data-id="pcap/LibPcap/ActivationError" data-name="libpcap::activationerror">
+      <a href="../LibPcap/ActivationError.html">ActivationError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/BpfInsn" data-name="libpcap::bpfinsn">
+      <a href="../LibPcap/BpfInsn.html">BpfInsn</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/BpfProgram" data-name="libpcap::bpfprogram">
+      <a href="../LibPcap/BpfProgram.html">BpfProgram</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/BreakLoopError" data-name="libpcap::breaklooperror">
+      <a href="../LibPcap/BreakLoopError.html">BreakLoopError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/ConfigurationError" data-name="libpcap::configurationerror">
+      <a href="../LibPcap/ConfigurationError.html">ConfigurationError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/CrystalPacketHandler" data-name="libpcap::crystalpackethandler">
+      <a href="../LibPcap/CrystalPacketHandler.html">CrystalPacketHandler</a>
+      
+    </li>
+  
+  <li class="parent " data-id="pcap/LibPcap/Device" data-name="libpcap::device">
+      <a href="../LibPcap/Device.html">Device</a>
+      
+        <ul>
+  
+  <li class=" " data-id="pcap/LibPcap/Device/Address" data-name="libpcap::device::address">
+      <a href="../LibPcap/Device/Address.html">Address</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/DumperError" data-name="libpcap::dumpererror">
+      <a href="../LibPcap/DumperError.html">DumperError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/Error" data-name="libpcap::error">
+      <a href="../LibPcap/Error.html">Error</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/EthernetHeader" data-name="libpcap::ethernetheader">
+      <a href="../LibPcap/EthernetHeader.html">EthernetHeader</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/FilterError" data-name="libpcap::filtererror">
+      <a href="../LibPcap/FilterError.html">FilterError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/IPv4Header" data-name="libpcap::ipv4header">
+      <a href="../LibPcap/IPv4Header.html">IPv4Header</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/IPv4ParseError" data-name="libpcap::ipv4parseerror">
+      <a href="../LibPcap/IPv4ParseError.html">IPv4ParseError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/OpenError" data-name="libpcap::openerror">
+      <a href="../LibPcap/OpenError.html">OpenError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/Packet" data-name="libpcap::packet">
+      <a href="../LibPcap/Packet.html">Packet</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapAddr" data-name="libpcap::pcapaddr">
+      <a href="../LibPcap/PcapAddr.html">PcapAddr</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapDumper" data-name="libpcap::pcapdumper">
+      <a href="../LibPcap/PcapDumper.html">PcapDumper</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapDumperPtr" data-name="libpcap::pcapdumperptr">
+      <a href="../LibPcap/PcapDumperPtr.html">PcapDumperPtr</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapDumperT" data-name="libpcap::pcapdumpert">
+      <a href="../LibPcap/PcapDumperT.html">PcapDumperT</a>
+      
+    </li>
+  
+  <li class=" current" data-id="pcap/LibPcap/PcapHandle" data-name="libpcap::pcaphandle">
+      <a href="../LibPcap/PcapHandle.html">PcapHandle</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapHandler" data-name="libpcap::pcaphandler">
+      <a href="../LibPcap/PcapHandler.html">PcapHandler</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapIf" data-name="libpcap::pcapif">
+      <a href="../LibPcap/PcapIf.html">PcapIf</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapPkthdr" data-name="libpcap::pcappkthdr">
+      <a href="../LibPcap/PcapPkthdr.html">PcapPkthdr</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapPtr" data-name="libpcap::pcapptr">
+      <a href="../LibPcap/PcapPtr.html">PcapPtr</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapRmtauth" data-name="libpcap::pcaprmtauth">
+      <a href="../LibPcap/PcapRmtauth.html">PcapRmtauth</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapStat" data-name="libpcap::pcapstat">
+      <a href="../LibPcap/PcapStat.html">PcapStat</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapT" data-name="libpcap::pcapt">
+      <a href="../LibPcap/PcapT.html">PcapT</a>
+      
+    </li>
+  
+  <li class="parent " data-id="pcap/LibPcap/Result" data-name="libpcap::result(t)">
+      <a href="../LibPcap/Result.html">Result</a>
+      
+        <ul>
+  
+  <li class=" " data-id="pcap/LibPcap/Result/Kind" data-name="libpcap::result::kind">
+      <a href="../LibPcap/Result/Kind.html">Kind</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/SavefileReader" data-name="libpcap::savefilereader">
+      <a href="../LibPcap/SavefileReader.html">SavefileReader</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/SavefileWriter" data-name="libpcap::savefilewriter">
+      <a href="../LibPcap/SavefileWriter.html">SavefileWriter</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/TCPHeader" data-name="libpcap::tcpheader">
+      <a href="../LibPcap/TCPHeader.html">TCPHeader</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/TCPParseError" data-name="libpcap::tcpparseerror">
+      <a href="../LibPcap/TCPParseError.html">TCPParseError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/TimeoutError" data-name="libpcap::timeouterror">
+      <a href="../LibPcap/TimeoutError.html">TimeoutError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/UDPHeader" data-name="libpcap::udpheader">
+      <a href="../LibPcap/UDPHeader.html">UDPHeader</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/UDPParseError" data-name="libpcap::udpparseerror">
+      <a href="../LibPcap/UDPParseError.html">UDPParseError</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">
+    class
+  </span> LibPcap::<wbr>PcapHandle
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../LibPcap/PcapHandle.html">LibPcap::PcapHandle</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L15" target="_blank">
+        libpcap/capture/handle.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+  
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#dead%28datalink%3AInt32%2Csnaplen%3AInt32%3D65535%29%3Aself-class-method" class="signature"><strong>.dead</strong>(datalink : Int32, snaplen : Int32 = <span class="n">65535</span>) : <span class="k">self</span></a>
+        
+          <div class="summary"><p>Create a &quot;dead&quot; handle (for writing to savefiles without capturing).</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+  
+  <h2>
+    <a id="class-method-summary" class="anchor" href="#class-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#for_live%28device%3ADevice%7CString%29-class-method" class="signature"><strong>.for_live</strong>(device : Device | String)</a>
+        
+          <div class="summary"><p>Create a handle for a live capture on a given device.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#for_offline%28path%3AString%29-class-method" class="signature"><strong>.for_offline</strong>(path : String)</a>
+        
+          <div class="summary"><p>Open an offline savefile (pcap or pcapng).</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#for_offline_with_precision%28path%3AString%2Cprecision%3AInt32%29-class-method" class="signature"><strong>.for_offline_with_precision</strong>(path : String, precision : Int32)</a>
+        
+          <div class="summary"><p>Open an offline savefile with specified timestamp precision.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#statustostr%28error%3AInt32%29%3AString-class-method" class="signature"><strong>.statustostr</strong>(error : Int32) : String</a>
+        
+          <div class="summary"><p>Convert a libpcap error code to a human‑readable string.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+  
+
+  
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#activate%3ANil-instance-method" class="signature"><strong>#activate</strong> : Nil</a>
+        
+          <div class="summary"><p>Activates the capture handle.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#active%3F%3ABool-instance-method" class="signature"><strong>#active?</strong> : Bool</a>
+        
+          <div class="summary"><p>Is the handle active? (non‑zero snapshot length usually indicates active)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#breakloop%3ANil-instance-method" class="signature"><strong>#breakloop</strong> : Nil</a>
+        
+          <div class="summary"><p>Break an ongoing <code><a href="../LibPcap/PcapHandle.html#loop%28count%3AInt%3D0%2C%26block%3APacket-%3E_%29%3ANil-instance-method">#loop</a></code> from another thread or signal handler.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#buffer_size%3D%28bytes%3AInt%29-instance-method" class="signature"><strong>#buffer_size=</strong>(bytes : Int)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#close%3ANil-instance-method" class="signature"><strong>#close</strong> : Nil</a>
+        
+          <div class="summary"><p>Explicitly close the handle and release all resources.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#datalink%3AInt32-instance-method" class="signature"><strong>#datalink</strong> : Int32</a>
+        
+          <div class="summary"><p>Returns the current datalink type (DLT_* constant).</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#datalink%3D%28dlt%3AInt32%29-instance-method" class="signature"><strong>#datalink=</strong>(dlt : Int32)</a>
+        
+          <div class="summary"><p>Set the datalink type (if supported by the capture).</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#datalink_name%3AString-instance-method" class="signature"><strong>#datalink_name</strong> : String</a>
+        
+          <div class="summary"><p>Human‑readable name for the current datalink.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#datalink_types%3AArray%28Int32%29-instance-method" class="signature"><strong>#datalink_types</strong> : Array(Int32)</a>
+        
+          <div class="summary"><p>Returns an array of DLT_* values supported by the device.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#direction%3D%28dir%3AInt32%29-instance-method" class="signature"><strong>#direction=</strong>(dir : Int32)</a>
+        
+          <div class="summary"><p>Set the direction of captured packets (incoming/outgoing/both).</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#dispatch%28count%3AInt%3D-1%2C%26block%3APacket-%3E_%29%3ANil-instance-method" class="signature"><strong>#dispatch</strong>(count : Int = <span class="n">-1</span>, &block : Packet -> _) : Nil</a>
+        
+          <div class="summary"><p>Capture up to <code>count</code> packets using <code>pcap_dispatch</code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#filter%3D%28expression%3AString%29-instance-method" class="signature"><strong>#filter=</strong>(expression : String)</a>
+        
+          <div class="summary"><p>Compile and set a BPF filter expression.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#finalize-instance-method" class="signature"><strong>#finalize</strong></a>
+        
+          <div class="summary"><p>Finalizer ensures the handle is closed when the object is GC'd.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#immediate_mode%3D%28on%3ABool%29-instance-method" class="signature"><strong>#immediate_mode=</strong>(on : Bool)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#inject%28data%3ABytes%29%3AInt32-instance-method" class="signature"><strong>#inject</strong>(data : Bytes) : Int32</a>
+        
+          <div class="summary"><p>Inject a raw packet (Bytes) onto the network.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#loop%28count%3AInt%3D0%2C%26block%3APacket-%3E_%29%3ANil-instance-method" class="signature"><strong>#loop</strong>(count : Int = <span class="n">0</span>, &block : Packet -> _) : Nil</a>
+        
+          <div class="summary"><p>Capture packets in a loop, yielding each packet to the given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#next_packet%3AResult%28Packet%29-instance-method" class="signature"><strong>#next_packet</strong> : Result(Packet)</a>
+        
+          <div class="summary"><p>Fetch the next available packet (blocking).</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#nonblock%3D%28on%3ABool%29-instance-method" class="signature"><strong>#nonblock=</strong>(on : Bool)</a>
+        
+          <div class="summary"><p>Enable or disable non‑blocking mode.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#nonblock%3F%3ABool-instance-method" class="signature"><strong>#nonblock?</strong> : Bool</a>
+        
+          <div class="summary"><p>Check if non‑blocking mode is enabled.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#open_dumper%28filename%3AString%29%3APcapDumper-instance-method" class="signature"><strong>#open_dumper</strong>(filename : String) : PcapDumper</a>
+        
+          <div class="summary"><p>Open a dumper for writing a savefile.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#open_dumper_append%28filename%3AString%29%3APcapDumper-instance-method" class="signature"><strong>#open_dumper_append</strong>(filename : String) : PcapDumper</a>
+        
+          <div class="summary"><p>Open a dumper in append mode (if supported by libpcap).</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#promisc%3D%28on%3ABool%29-instance-method" class="signature"><strong>#promisc=</strong>(on : Bool)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ptr%3ALibPcap%3A%3APcapPtr-instance-method" class="signature"><strong>#ptr</strong> : LibPcap::PcapPtr</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#rfmon%3D%28on%3ABool%29-instance-method" class="signature"><strong>#rfmon=</strong>(on : Bool)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#selectable_fd%3AInt32%7CNil-instance-method" class="signature"><strong>#selectable_fd</strong> : Int32 | Nil</a>
+        
+          <div class="summary"><p>Get the file descriptor for select/poll (only works in some cases).</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#sendpacket%28data%3ABytes%29%3AInt32-instance-method" class="signature"><strong>#sendpacket</strong>(data : Bytes) : Int32</a>
+        
+          <div class="summary"><p>Alias for #inject (compatibility with libpcap naming)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#snaplen%3D%28value%3AInt%29-instance-method" class="signature"><strong>#snaplen=</strong>(value : Int)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#stats%3ATuple%28UInt32%2CUInt32%2CUInt32%29-instance-method" class="signature"><strong>#stats</strong> : Tuple(UInt32, UInt32, UInt32)</a>
+        
+          <div class="summary"><p>Returns a tuple of (received, dropped, if_dropped).</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#timeout_ms%3D%28ms%3AInt%29-instance-method" class="signature"><strong>#timeout_ms=</strong>(ms : Int)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tstamp_precision%3AInt32-instance-method" class="signature"><strong>#tstamp_precision</strong> : Int32</a>
+        
+          <div class="summary"><p>Get the current timestamp precision.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tstamp_precision%3D%28precision%3AInt32%29-instance-method" class="signature"><strong>#tstamp_precision=</strong>(precision : Int32)</a>
+        
+          <div class="summary"><p>Set timestamp precision (microseconds or nanoseconds).</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tstamp_type%3D%28type%3AInt32%29-instance-method" class="signature"><strong>#tstamp_type=</strong>(type : Int32)</a>
+        
+          <div class="summary"><p>Set the timestamp type (must be called before activation).</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tstamp_types%3AArray%28Int32%29-instance-method" class="signature"><strong>#tstamp_types</strong> : Array(Int32)</a>
+        
+          <div class="summary"><p>List all timestamp types supported by this capture device.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <div class="methods-inherited">
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+  </div>
+
+  
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+  
+    <div class="entry-detail" id="dead(datalink:Int32,snaplen:Int32=65535):self-class-method">
+      <div class="signature">
+        
+        def self.<strong>dead</strong>(datalink : Int32, snaplen : Int32 = <span class="n">65535</span>) : <span class="k">self</span>
+
+        <a class="method-permalink" href="#dead%28datalink%3AInt32%2Csnaplen%3AInt32%3D65535%29%3Aself-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Create a &quot;dead&quot; handle (for writing to savefiles without capturing).
+The datalink type must match the packets you will write.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L289" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+  
+  <h2>
+    <a id="class-method-detail" class="anchor" href="#class-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="for_live(device:Device|String)-class-method">
+      <div class="signature">
+        
+        def self.<strong>for_live</strong>(device : <a href="../LibPcap/Device.html">Device</a> | String)
+
+        <a class="method-permalink" href="#for_live%28device%3ADevice%7CString%29-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Create a handle for a live capture on a given device.</p>
+<p>Raises <code><a href="../LibPcap/OpenError.html">OpenError</a></code> if the device cannot be opened.
+The handle is not activated until <code><a href="../LibPcap/PcapHandle.html#activate%3ANil-instance-method">#activate</a></code> is called.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L23" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="for_offline(path:String)-class-method">
+      <div class="signature">
+        
+        def self.<strong>for_offline</strong>(path : String)
+
+        <a class="method-permalink" href="#for_offline%28path%3AString%29-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Open an offline savefile (pcap or pcapng).</p>
+<p>Raises <code><a href="../LibPcap/OpenError.html">OpenError</a></code> if the file cannot be opened.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L36" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="for_offline_with_precision(path:String,precision:Int32)-class-method">
+      <div class="signature">
+        
+        def self.<strong>for_offline_with_precision</strong>(path : String, precision : Int32)
+
+        <a class="method-permalink" href="#for_offline_with_precision%28path%3AString%2Cprecision%3AInt32%29-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Open an offline savefile with specified timestamp precision.
+Precision should be PCAP_TSTAMP_PRECISION_MICRO or PCAP_TSTAMP_PRECISION_NANO.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L47" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="statustostr(error:Int32):String-class-method">
+      <div class="signature">
+        
+        def self.<strong>statustostr</strong>(error : Int32) : String
+
+        <a class="method-permalink" href="#statustostr%28error%3AInt32%29%3AString-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Convert a libpcap error code to a human‑readable string.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L540" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+  
+
+  
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="activate:Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>activate</strong> : Nil
+
+        <a class="method-permalink" href="#activate%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Activates the capture handle.
+Must be called before any capture operation.</p>
+<p>Raises <code><a href="../LibPcap/ActivationError.html">ActivationError</a></code> on failure.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L97" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="active?:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>active?</strong> : Bool
+
+        <a class="method-permalink" href="#active%3F%3ABool-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Is the handle active? (non‑zero snapshot length usually indicates active)</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L106" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="breakloop:Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>breakloop</strong> : Nil
+
+        <a class="method-permalink" href="#breakloop%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Break an ongoing <code><a href="../LibPcap/PcapHandle.html#loop%28count%3AInt%3D0%2C%26block%3APacket-%3E_%29%3ANil-instance-method">#loop</a></code> from another thread or signal handler.</p>
+<p>The running <code><a href="../LibPcap/PcapHandle.html#loop%28count%3AInt%3D0%2C%26block%3APacket-%3E_%29%3ANil-instance-method">#loop</a></code> will raise <code><a href="../LibPcap/BreakLoopError.html">BreakLoopError</a></code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L227" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="buffer_size=(bytes:Int)-instance-method">
+      <div class="signature">
+        
+        def <strong>buffer_size=</strong>(bytes : Int)
+
+        <a class="method-permalink" href="#buffer_size%3D%28bytes%3AInt%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L77" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="close:Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>close</strong> : Nil
+
+        <a class="method-permalink" href="#close%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Explicitly close the handle and release all resources.
+The handle cannot be used afterwards.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L278" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="datalink:Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>datalink</strong> : Int32
+
+        <a class="method-permalink" href="#datalink%3AInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns the current datalink type (DLT_* constant).</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L253" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="datalink=(dlt:Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>datalink=</strong>(dlt : Int32)
+
+        <a class="method-permalink" href="#datalink%3D%28dlt%3AInt32%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Set the datalink type (if supported by the capture).</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L258" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="datalink_name:String-instance-method">
+      <div class="signature">
+        
+        def <strong>datalink_name</strong> : String
+
+        <a class="method-permalink" href="#datalink_name%3AString-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Human‑readable name for the current datalink.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L267" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="datalink_types:Array(Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>datalink_types</strong> : Array(Int32)
+
+        <a class="method-permalink" href="#datalink_types%3AArray%28Int32%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns an array of DLT_* values supported by the device.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L365" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="direction=(dir:Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>direction=</strong>(dir : Int32)
+
+        <a class="method-permalink" href="#direction%3D%28dir%3AInt32%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Set the direction of captured packets (incoming/outgoing/both).
+Must be called after activation.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L352" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="dispatch(count:Int=-1,&amp;block:Packet-&gt;_):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>dispatch</strong>(count : Int = <span class="n">-1</span>, &block : <a href="../LibPcap/Packet.html">Packet</a> -> _) : Nil
+
+        <a class="method-permalink" href="#dispatch%28count%3AInt%3D-1%2C%26block%3APacket-%3E_%29%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Capture up to <code>count</code> packets using <code>pcap_dispatch</code>.
+This is similar to <code><a href="../LibPcap/PcapHandle.html#loop%28count%3AInt%3D0%2C%26block%3APacket-%3E_%29%3ANil-instance-method">#loop</a></code> but returns immediately after processing
+available packets (or after timeout) without waiting for the full count.
+Yields each packet.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L405" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="filter=(expression:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>filter=</strong>(expression : String)
+
+        <a class="method-permalink" href="#filter%3D%28expression%3AString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Compile and set a BPF filter expression.</p>
+<p>Example: handle.filter = &quot;tcp port 80&quot;</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L117" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="finalize-instance-method">
+      <div class="signature">
+        
+        def <strong>finalize</strong>
+
+        <a class="method-permalink" href="#finalize-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Finalizer ensures the handle is closed when the object is GC'd.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L298" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="immediate_mode=(on:Bool)-instance-method">
+      <div class="signature">
+        
+        def <strong>immediate_mode=</strong>(on : Bool)
+
+        <a class="method-permalink" href="#immediate_mode%3D%28on%3ABool%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L81" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="inject(data:Bytes):Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>inject</strong>(data : Bytes) : Int32
+
+        <a class="method-permalink" href="#inject%28data%3ABytes%29%3AInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Inject a raw packet (Bytes) onto the network.
+Returns the number of bytes sent, or raises on error.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L383" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="loop(count:Int=0,&amp;block:Packet-&gt;_):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>loop</strong>(count : Int = <span class="n">0</span>, &block : <a href="../LibPcap/Packet.html">Packet</a> -> _) : Nil
+
+        <a class="method-permalink" href="#loop%28count%3AInt%3D0%2C%26block%3APacket-%3E_%29%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Capture packets in a loop, yielding each packet to the given block.</p>
+<ul>
+<li><code>count</code> : number of packets to capture (0 = infinite until <code><a href="../LibPcap/PcapHandle.html#breakloop%3ANil-instance-method">#breakloop</a></code>)</li>
+<li>Yields a <code><a href="../LibPcap/Packet.html">Packet</a></code> for each captured packet.</li>
+<li>Raises <code><a href="../LibPcap/BreakLoopError.html">BreakLoopError</a></code> if <code><a href="../LibPcap/PcapHandle.html#breakloop%3ANil-instance-method">#breakloop</a></code> is called from within the block.</li>
+<li>Raises <code><a href="../LibPcap/Error.html">Error</a></code> on other libpcap errors.</li>
+</ul>
+<p>Example:
+handle.loop do |packet|
+puts packet.data.size
+end</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L150" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="next_packet:Result(Packet)-instance-method">
+      <div class="signature">
+        
+        def <strong>next_packet</strong> : <a href="../LibPcap/Result.html">Result</a>(<a href="../LibPcap/Packet.html">Packet</a>)
+
+        <a class="method-permalink" href="#next_packet%3AResult%28Packet%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Fetch the next available packet (blocking).</p>
+<p>Returns a <code><a href="../LibPcap/Result.html">Result</a>(<a href="../LibPcap/Packet.html">Packet</a>)</code> where:</p>
+<ul>
+<li><code>.ok?</code>   : packet is available</li>
+<li><code>.eof?</code>  : end‑of‑file (offline capture only)</li>
+<li><code>.error?</code> : an error occurred (the error is stored inside)</li>
+</ul>
+<p>This is the preferred method for single‑packet processing.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L198" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="nonblock=(on:Bool)-instance-method">
+      <div class="signature">
+        
+        def <strong>nonblock=</strong>(on : Bool)
+
+        <a class="method-permalink" href="#nonblock%3D%28on%3ABool%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Enable or disable non‑blocking mode.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L322" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="nonblock?:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>nonblock?</strong> : Bool
+
+        <a class="method-permalink" href="#nonblock%3F%3ABool-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Check if non‑blocking mode is enabled.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L331" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="open_dumper(filename:String):PcapDumper-instance-method">
+      <div class="signature">
+        
+        def <strong>open_dumper</strong>(filename : String) : <a href="../LibPcap/PcapDumper.html">PcapDumper</a>
+
+        <a class="method-permalink" href="#open_dumper%28filename%3AString%29%3APcapDumper-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Open a dumper for writing a savefile.
+The returned PcapDumper must be closed by the caller.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L552" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="open_dumper_append(filename:String):PcapDumper-instance-method">
+      <div class="signature">
+        
+        def <strong>open_dumper_append</strong>(filename : String) : <a href="../LibPcap/PcapDumper.html">PcapDumper</a>
+
+        <a class="method-permalink" href="#open_dumper_append%28filename%3AString%29%3APcapDumper-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Open a dumper in append mode (if supported by libpcap).
+Writes packets to the end of an existing file.
+Raises DumperError on failure.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L526" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="promisc=(on:Bool)-instance-method">
+      <div class="signature">
+        
+        def <strong>promisc=</strong>(on : Bool)
+
+        <a class="method-permalink" href="#promisc%3D%28on%3ABool%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L69" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ptr:LibPcap::PcapPtr-instance-method">
+      <div class="signature">
+        
+        def <strong>ptr</strong> : <a href="../LibPcap/PcapPtr.html">LibPcap::PcapPtr</a>
+
+        <a class="method-permalink" href="#ptr%3ALibPcap%3A%3APcapPtr-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L16" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="rfmon=(on:Bool)-instance-method">
+      <div class="signature">
+        
+        def <strong>rfmon=</strong>(on : Bool)
+
+        <a class="method-permalink" href="#rfmon%3D%28on%3ABool%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L85" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="selectable_fd:Int32|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>selectable_fd</strong> : Int32 | Nil
+
+        <a class="method-permalink" href="#selectable_fd%3AInt32%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Get the file descriptor for select/poll (only works in some cases).</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L341" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="sendpacket(data:Bytes):Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>sendpacket</strong>(data : Bytes) : Int32
+
+        <a class="method-permalink" href="#sendpacket%28data%3ABytes%29%3AInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Alias for #inject (compatibility with libpcap naming)</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L393" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="snaplen=(value:Int)-instance-method">
+      <div class="signature">
+        
+        def <strong>snaplen=</strong>(value : Int)
+
+        <a class="method-permalink" href="#snaplen%3D%28value%3AInt%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L65" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="stats:Tuple(UInt32,UInt32,UInt32)-instance-method">
+      <div class="signature">
+        
+        def <strong>stats</strong> : Tuple(UInt32, UInt32, UInt32)
+
+        <a class="method-permalink" href="#stats%3ATuple%28UInt32%2CUInt32%2CUInt32%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns a tuple of (received, dropped, if_dropped).</p>
+<p>Raises <code><a href="../LibPcap/Error.html">Error</a></code> if <code>pcap_stats</code> fails.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="timeout_ms=(ms:Int)-instance-method">
+      <div class="signature">
+        
+        def <strong>timeout_ms=</strong>(ms : Int)
+
+        <a class="method-permalink" href="#timeout_ms%3D%28ms%3AInt%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L73" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tstamp_precision:Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>tstamp_precision</strong> : Int32
+
+        <a class="method-permalink" href="#tstamp_precision%3AInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Get the current timestamp precision.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L313" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tstamp_precision=(precision:Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>tstamp_precision=</strong>(precision : Int32)
+
+        <a class="method-permalink" href="#tstamp_precision%3D%28precision%3AInt32%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Set timestamp precision (microseconds or nanoseconds).
+Must be called before activation.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L308" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tstamp_type=(type:Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>tstamp_type=</strong>(type : Int32)
+
+        <a class="method-permalink" href="#tstamp_type%3D%28type%3AInt32%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Set the timestamp type (must be called before activation).
+Raises ConfigurationError if the type is not supported.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L482" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tstamp_types:Array(Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>tstamp_types</strong> : Array(Int32)
+
+        <a class="method-permalink" href="#tstamp_types%3AArray%28Int32%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>List all timestamp types supported by this capture device.
+Returns an array of constants (PCAP_TSTAMP_*).</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/capture/handle.cr#L492" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+</div>
+
+</body>
+</html>

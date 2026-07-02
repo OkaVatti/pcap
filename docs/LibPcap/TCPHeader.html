@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.20.1">
+<meta name="crystal_docs.project_version" content="mother">
+<meta name="crystal_docs.project_name" content="pcap">
+
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+  <meta name="repository-name" content="pcap">
+  <title>LibPcap::TCPHeader - pcap mother</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          pcap
+        </a>
+      </h1>
+
+      <span class="project-version">
+        mother
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="pcap/LibPcap" data-name="libpcap">
+      <a href="../LibPcap.html">LibPcap</a>
+      
+        <ul>
+  
+  <li class=" " data-id="pcap/LibPcap/ActivationError" data-name="libpcap::activationerror">
+      <a href="../LibPcap/ActivationError.html">ActivationError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/BpfInsn" data-name="libpcap::bpfinsn">
+      <a href="../LibPcap/BpfInsn.html">BpfInsn</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/BpfProgram" data-name="libpcap::bpfprogram">
+      <a href="../LibPcap/BpfProgram.html">BpfProgram</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/BreakLoopError" data-name="libpcap::breaklooperror">
+      <a href="../LibPcap/BreakLoopError.html">BreakLoopError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/ConfigurationError" data-name="libpcap::configurationerror">
+      <a href="../LibPcap/ConfigurationError.html">ConfigurationError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/CrystalPacketHandler" data-name="libpcap::crystalpackethandler">
+      <a href="../LibPcap/CrystalPacketHandler.html">CrystalPacketHandler</a>
+      
+    </li>
+  
+  <li class="parent " data-id="pcap/LibPcap/Device" data-name="libpcap::device">
+      <a href="../LibPcap/Device.html">Device</a>
+      
+        <ul>
+  
+  <li class=" " data-id="pcap/LibPcap/Device/Address" data-name="libpcap::device::address">
+      <a href="../LibPcap/Device/Address.html">Address</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/DumperError" data-name="libpcap::dumpererror">
+      <a href="../LibPcap/DumperError.html">DumperError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/Error" data-name="libpcap::error">
+      <a href="../LibPcap/Error.html">Error</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/EthernetHeader" data-name="libpcap::ethernetheader">
+      <a href="../LibPcap/EthernetHeader.html">EthernetHeader</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/FilterError" data-name="libpcap::filtererror">
+      <a href="../LibPcap/FilterError.html">FilterError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/IPv4Header" data-name="libpcap::ipv4header">
+      <a href="../LibPcap/IPv4Header.html">IPv4Header</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/IPv4ParseError" data-name="libpcap::ipv4parseerror">
+      <a href="../LibPcap/IPv4ParseError.html">IPv4ParseError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/OpenError" data-name="libpcap::openerror">
+      <a href="../LibPcap/OpenError.html">OpenError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/Packet" data-name="libpcap::packet">
+      <a href="../LibPcap/Packet.html">Packet</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapAddr" data-name="libpcap::pcapaddr">
+      <a href="../LibPcap/PcapAddr.html">PcapAddr</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapDumper" data-name="libpcap::pcapdumper">
+      <a href="../LibPcap/PcapDumper.html">PcapDumper</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapDumperPtr" data-name="libpcap::pcapdumperptr">
+      <a href="../LibPcap/PcapDumperPtr.html">PcapDumperPtr</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapDumperT" data-name="libpcap::pcapdumpert">
+      <a href="../LibPcap/PcapDumperT.html">PcapDumperT</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapHandle" data-name="libpcap::pcaphandle">
+      <a href="../LibPcap/PcapHandle.html">PcapHandle</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapHandler" data-name="libpcap::pcaphandler">
+      <a href="../LibPcap/PcapHandler.html">PcapHandler</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapIf" data-name="libpcap::pcapif">
+      <a href="../LibPcap/PcapIf.html">PcapIf</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapPkthdr" data-name="libpcap::pcappkthdr">
+      <a href="../LibPcap/PcapPkthdr.html">PcapPkthdr</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapPtr" data-name="libpcap::pcapptr">
+      <a href="../LibPcap/PcapPtr.html">PcapPtr</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapRmtauth" data-name="libpcap::pcaprmtauth">
+      <a href="../LibPcap/PcapRmtauth.html">PcapRmtauth</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapStat" data-name="libpcap::pcapstat">
+      <a href="../LibPcap/PcapStat.html">PcapStat</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapT" data-name="libpcap::pcapt">
+      <a href="../LibPcap/PcapT.html">PcapT</a>
+      
+    </li>
+  
+  <li class="parent " data-id="pcap/LibPcap/Result" data-name="libpcap::result(t)">
+      <a href="../LibPcap/Result.html">Result</a>
+      
+        <ul>
+  
+  <li class=" " data-id="pcap/LibPcap/Result/Kind" data-name="libpcap::result::kind">
+      <a href="../LibPcap/Result/Kind.html">Kind</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/SavefileReader" data-name="libpcap::savefilereader">
+      <a href="../LibPcap/SavefileReader.html">SavefileReader</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/SavefileWriter" data-name="libpcap::savefilewriter">
+      <a href="../LibPcap/SavefileWriter.html">SavefileWriter</a>
+      
+    </li>
+  
+  <li class=" current" data-id="pcap/LibPcap/TCPHeader" data-name="libpcap::tcpheader">
+      <a href="../LibPcap/TCPHeader.html">TCPHeader</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/TCPParseError" data-name="libpcap::tcpparseerror">
+      <a href="../LibPcap/TCPParseError.html">TCPParseError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/TimeoutError" data-name="libpcap::timeouterror">
+      <a href="../LibPcap/TimeoutError.html">TimeoutError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/UDPHeader" data-name="libpcap::udpheader">
+      <a href="../LibPcap/UDPHeader.html">UDPHeader</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/UDPParseError" data-name="libpcap::udpparseerror">
+      <a href="../LibPcap/UDPParseError.html">UDPParseError</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">
+    class
+  </span> LibPcap::<wbr>TCPHeader
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../LibPcap/TCPHeader.html">LibPcap::TCPHeader</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/packet/tcp.cr#L9" target="_blank">
+        libpcap/packet/tcp.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>
+      <a id="constant-summary" class="anchor" href="#constant-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Constant Summary
+    </h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="MIN_HEADER_LEN">
+        <strong>MIN_HEADER_LEN</strong> = <code><span class="n">20</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Minimum header length without options (20 bytes).</p>
+      </dd>
+      
+    
+  </dl>
+
+
+
+  
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28data%3ABytes%29-class-method" class="signature"><strong>.new</strong>(data : Bytes)</a>
+        
+          <div class="summary"><p>Creates a new TCPHeader from the given raw bytes.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#ack%3F%3ABool-instance-method" class="signature"><strong>#ack?</strong> : Bool</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ack_num%3AUInt32-instance-method" class="signature"><strong>#ack_num</strong> : UInt32</a>
+        
+          <div class="summary"><p>Acknowledgment number (valid if ACK flag is set).</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#checksum%3AUInt16-instance-method" class="signature"><strong>#checksum</strong> : UInt16</a>
+        
+          <div class="summary"><p>Checksum.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cwr%3F%3ABool-instance-method" class="signature"><strong>#cwr?</strong> : Bool</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#data_offset%3AUInt8-instance-method" class="signature"><strong>#data_offset</strong> : UInt8</a>
+        
+          <div class="summary"><p>Data Offset (header length in 32‑bit words).</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#dst_port%3AUInt16-instance-method" class="signature"><strong>#dst_port</strong> : UInt16</a>
+        
+          <div class="summary"><p>Destination port.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#each_option%28%26%29-instance-method" class="signature"><strong>#each_option</strong>(&)</a>
+        
+          <div class="summary"><p>Iterates over each option.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ece%3F%3ABool-instance-method" class="signature"><strong>#ece?</strong> : Bool</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#fin%3F%3ABool-instance-method" class="signature"><strong>#fin?</strong> : Bool</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#flags%3AUInt16-instance-method" class="signature"><strong>#flags</strong> : UInt16</a>
+        
+          <div class="summary"><p>Flags byte (NS, CWR, ECE, URG, ACK, PSH, RST, SYN, FIN).</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#header_len%3AInt32-instance-method" class="signature"><strong>#header_len</strong> : Int32</a>
+        
+          <div class="summary"><p>Header length in bytes (including options).</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ns%3F%3ABool-instance-method" class="signature"><strong>#ns?</strong> : Bool</a>
+        
+          <div class="summary"><p>Individual flags (convenience predicates).</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#options%3ABytes-instance-method" class="signature"><strong>#options</strong> : Bytes</a>
+        
+          <div class="summary"><p>Returns the raw bytes of the options (empty if none).</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#payload%3ABytes-instance-method" class="signature"><strong>#payload</strong> : Bytes</a>
+        
+          <div class="summary"><p>Returns the payload (TCP data) after the header, including options.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#psh%3F%3ABool-instance-method" class="signature"><strong>#psh?</strong> : Bool</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#raw%3ABytes-instance-method" class="signature"><strong>#raw</strong> : Bytes</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#reserved%3AUInt8-instance-method" class="signature"><strong>#reserved</strong> : UInt8</a>
+        
+          <div class="summary"><p>Reserved bits (should be zero).</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#rst%3F%3ABool-instance-method" class="signature"><strong>#rst?</strong> : Bool</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#seq_num%3AUInt32-instance-method" class="signature"><strong>#seq_num</strong> : UInt32</a>
+        
+          <div class="summary"><p>Sequence number.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#src_port%3AUInt16-instance-method" class="signature"><strong>#src_port</strong> : UInt16</a>
+        
+          <div class="summary"><p>Source port.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#syn%3F%3ABool-instance-method" class="signature"><strong>#syn?</strong> : Bool</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_s%28io%3AIO%29%3ANil-instance-method" class="signature"><strong>#to_s</strong>(io : IO) : Nil</a>
+        
+          <div class="summary"><p>Returns a human‑readable description.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#urg%3F%3ABool-instance-method" class="signature"><strong>#urg?</strong> : Bool</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#urgent%3AUInt16-instance-method" class="signature"><strong>#urgent</strong> : UInt16</a>
+        
+          <div class="summary"><p>Urgent pointer (valid if URG flag is set).</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#window%3AUInt16-instance-method" class="signature"><strong>#window</strong> : UInt16</a>
+        
+          <div class="summary"><p>Window size.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <div class="methods-inherited">
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+  </div>
+
+  
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+  
+    <div class="entry-detail" id="new(data:Bytes)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(data : Bytes)
+
+        <a class="method-permalink" href="#new%28data%3ABytes%29-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Creates a new TCPHeader from the given raw bytes.</p>
+<p>Raises <code><a href="../LibPcap/TCPParseError.html">TCPParseError</a></code> if the data is too short or malformed.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/packet/tcp.cr#L20" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="ack?:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>ack?</strong> : Bool
+
+        <a class="method-permalink" href="#ack%3F%3ABool-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/packet/tcp.cr#L106" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ack_num:UInt32-instance-method">
+      <div class="signature">
+        
+        def <strong>ack_num</strong> : UInt32
+
+        <a class="method-permalink" href="#ack_num%3AUInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Acknowledgment number (valid if ACK flag is set).</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/packet/tcp.cr#L62" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="checksum:UInt16-instance-method">
+      <div class="signature">
+        
+        def <strong>checksum</strong> : UInt16
+
+        <a class="method-permalink" href="#checksum%3AUInt16-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Checksum.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/packet/tcp.cr#L132" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cwr?:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>cwr?</strong> : Bool
+
+        <a class="method-permalink" href="#cwr%3F%3ABool-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/packet/tcp.cr#L94" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="data_offset:UInt8-instance-method">
+      <div class="signature">
+        
+        def <strong>data_offset</strong> : UInt8
+
+        <a class="method-permalink" href="#data_offset%3AUInt8-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Data Offset (header length in 32‑bit words).</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/packet/tcp.cr#L68" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="dst_port:UInt16-instance-method">
+      <div class="signature">
+        
+        def <strong>dst_port</strong> : UInt16
+
+        <a class="method-permalink" href="#dst_port%3AUInt16-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Destination port.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/packet/tcp.cr#L51" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="each_option(&amp;)-instance-method">
+      <div class="signature">
+        
+        def <strong>each_option</strong>(&)
+
+        <a class="method-permalink" href="#each_option%28%26%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Iterates over each option.
+Each option is a tuple <code>{kind, len, data}</code> where <code>len</code> includes the kind and len bytes.
+See RFC 793 and others for option definitions.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/packet/tcp.cr#L153" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ece?:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>ece?</strong> : Bool
+
+        <a class="method-permalink" href="#ece%3F%3ABool-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/packet/tcp.cr#L98" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="fin?:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>fin?</strong> : Bool
+
+        <a class="method-permalink" href="#fin%3F%3ABool-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/packet/tcp.cr#L122" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="flags:UInt16-instance-method">
+      <div class="signature">
+        
+        def <strong>flags</strong> : UInt16
+
+        <a class="method-permalink" href="#flags%3AUInt16-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Flags byte (NS, CWR, ECE, URG, ACK, PSH, RST, SYN, FIN).
+The lower 9 bits are flags.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/packet/tcp.cr#L84" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="header_len:Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>header_len</strong> : Int32
+
+        <a class="method-permalink" href="#header_len%3AInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Header length in bytes (including options).</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/packet/tcp.cr#L73" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ns?:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>ns?</strong> : Bool
+
+        <a class="method-permalink" href="#ns%3F%3ABool-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Individual flags (convenience predicates).</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/packet/tcp.cr#L90" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="options:Bytes-instance-method">
+      <div class="signature">
+        
+        def <strong>options</strong> : Bytes
+
+        <a class="method-permalink" href="#options%3ABytes-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns the raw bytes of the options (empty if none).</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/packet/tcp.cr#L146" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="payload:Bytes-instance-method">
+      <div class="signature">
+        
+        def <strong>payload</strong> : Bytes
+
+        <a class="method-permalink" href="#payload%3ABytes-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns the payload (TCP data) after the header, including options.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/packet/tcp.cr#L182" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="psh?:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>psh?</strong> : Bool
+
+        <a class="method-permalink" href="#psh%3F%3ABool-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/packet/tcp.cr#L110" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="raw:Bytes-instance-method">
+      <div class="signature">
+        
+        def <strong>raw</strong> : Bytes
+
+        <a class="method-permalink" href="#raw%3ABytes-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/packet/tcp.cr#L13" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="reserved:UInt8-instance-method">
+      <div class="signature">
+        
+        def <strong>reserved</strong> : UInt8
+
+        <a class="method-permalink" href="#reserved%3AUInt8-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Reserved bits (should be zero).</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/packet/tcp.cr#L78" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="rst?:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>rst?</strong> : Bool
+
+        <a class="method-permalink" href="#rst%3F%3ABool-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/packet/tcp.cr#L114" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="seq_num:UInt32-instance-method">
+      <div class="signature">
+        
+        def <strong>seq_num</strong> : UInt32
+
+        <a class="method-permalink" href="#seq_num%3AUInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Sequence number.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/packet/tcp.cr#L56" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="src_port:UInt16-instance-method">
+      <div class="signature">
+        
+        def <strong>src_port</strong> : UInt16
+
+        <a class="method-permalink" href="#src_port%3AUInt16-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Source port.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/packet/tcp.cr#L46" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="syn?:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>syn?</strong> : Bool
+
+        <a class="method-permalink" href="#syn%3F%3ABool-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/packet/tcp.cr#L118" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_s(io:IO):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>to_s</strong>(io : IO) : Nil
+
+        <a class="method-permalink" href="#to_s%28io%3AIO%29%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns a human‑readable description.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/packet/tcp.cr#L191" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="urg?:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>urg?</strong> : Bool
+
+        <a class="method-permalink" href="#urg%3F%3ABool-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/packet/tcp.cr#L102" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="urgent:UInt16-instance-method">
+      <div class="signature">
+        
+        def <strong>urgent</strong> : UInt16
+
+        <a class="method-permalink" href="#urgent%3AUInt16-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Urgent pointer (valid if URG flag is set).</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/packet/tcp.cr#L137" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="window:UInt16-instance-method">
+      <div class="signature">
+        
+        def <strong>window</strong> : UInt16
+
+        <a class="method-permalink" href="#window%3AUInt16-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Window size.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/OkaVatti/pcap/blob/23592078c3f5cd42bca9341d9497fd7f644a7815/src/libpcap/packet/tcp.cr#L127" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+</div>
+
+</body>
+</html>

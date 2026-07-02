@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.20.1">
+<meta name="crystal_docs.project_version" content="mother">
+<meta name="crystal_docs.project_name" content="pcap">
+
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/doc.js"></script>
+
+  <meta name="repository-name" content="pcap">
+  <title>pcap mother</title>
+  <script type="text/javascript">
+  CrystalDocs.base_path = "";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="index.html">
+          pcap
+        </a>
+      </h1>
+
+      <span class="project-version">
+        mother
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent " data-id="pcap/LibPcap" data-name="libpcap">
+      <a href="LibPcap.html">LibPcap</a>
+      
+        <ul>
+  
+  <li class=" " data-id="pcap/LibPcap/ActivationError" data-name="libpcap::activationerror">
+      <a href="LibPcap/ActivationError.html">ActivationError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/BpfInsn" data-name="libpcap::bpfinsn">
+      <a href="LibPcap/BpfInsn.html">BpfInsn</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/BpfProgram" data-name="libpcap::bpfprogram">
+      <a href="LibPcap/BpfProgram.html">BpfProgram</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/BreakLoopError" data-name="libpcap::breaklooperror">
+      <a href="LibPcap/BreakLoopError.html">BreakLoopError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/ConfigurationError" data-name="libpcap::configurationerror">
+      <a href="LibPcap/ConfigurationError.html">ConfigurationError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/CrystalPacketHandler" data-name="libpcap::crystalpackethandler">
+      <a href="LibPcap/CrystalPacketHandler.html">CrystalPacketHandler</a>
+      
+    </li>
+  
+  <li class="parent " data-id="pcap/LibPcap/Device" data-name="libpcap::device">
+      <a href="LibPcap/Device.html">Device</a>
+      
+        <ul>
+  
+  <li class=" " data-id="pcap/LibPcap/Device/Address" data-name="libpcap::device::address">
+      <a href="LibPcap/Device/Address.html">Address</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/DumperError" data-name="libpcap::dumpererror">
+      <a href="LibPcap/DumperError.html">DumperError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/Error" data-name="libpcap::error">
+      <a href="LibPcap/Error.html">Error</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/EthernetHeader" data-name="libpcap::ethernetheader">
+      <a href="LibPcap/EthernetHeader.html">EthernetHeader</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/FilterError" data-name="libpcap::filtererror">
+      <a href="LibPcap/FilterError.html">FilterError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/IPv4Header" data-name="libpcap::ipv4header">
+      <a href="LibPcap/IPv4Header.html">IPv4Header</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/IPv4ParseError" data-name="libpcap::ipv4parseerror">
+      <a href="LibPcap/IPv4ParseError.html">IPv4ParseError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/OpenError" data-name="libpcap::openerror">
+      <a href="LibPcap/OpenError.html">OpenError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/Packet" data-name="libpcap::packet">
+      <a href="LibPcap/Packet.html">Packet</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapAddr" data-name="libpcap::pcapaddr">
+      <a href="LibPcap/PcapAddr.html">PcapAddr</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapDumper" data-name="libpcap::pcapdumper">
+      <a href="LibPcap/PcapDumper.html">PcapDumper</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapDumperPtr" data-name="libpcap::pcapdumperptr">
+      <a href="LibPcap/PcapDumperPtr.html">PcapDumperPtr</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapDumperT" data-name="libpcap::pcapdumpert">
+      <a href="LibPcap/PcapDumperT.html">PcapDumperT</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapHandle" data-name="libpcap::pcaphandle">
+      <a href="LibPcap/PcapHandle.html">PcapHandle</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapHandler" data-name="libpcap::pcaphandler">
+      <a href="LibPcap/PcapHandler.html">PcapHandler</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapIf" data-name="libpcap::pcapif">
+      <a href="LibPcap/PcapIf.html">PcapIf</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapPkthdr" data-name="libpcap::pcappkthdr">
+      <a href="LibPcap/PcapPkthdr.html">PcapPkthdr</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapPtr" data-name="libpcap::pcapptr">
+      <a href="LibPcap/PcapPtr.html">PcapPtr</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapRmtauth" data-name="libpcap::pcaprmtauth">
+      <a href="LibPcap/PcapRmtauth.html">PcapRmtauth</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapStat" data-name="libpcap::pcapstat">
+      <a href="LibPcap/PcapStat.html">PcapStat</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/PcapT" data-name="libpcap::pcapt">
+      <a href="LibPcap/PcapT.html">PcapT</a>
+      
+    </li>
+  
+  <li class="parent " data-id="pcap/LibPcap/Result" data-name="libpcap::result(t)">
+      <a href="LibPcap/Result.html">Result</a>
+      
+        <ul>
+  
+  <li class=" " data-id="pcap/LibPcap/Result/Kind" data-name="libpcap::result::kind">
+      <a href="LibPcap/Result/Kind.html">Kind</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/SavefileReader" data-name="libpcap::savefilereader">
+      <a href="LibPcap/SavefileReader.html">SavefileReader</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/SavefileWriter" data-name="libpcap::savefilewriter">
+      <a href="LibPcap/SavefileWriter.html">SavefileWriter</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/TCPHeader" data-name="libpcap::tcpheader">
+      <a href="LibPcap/TCPHeader.html">TCPHeader</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/TCPParseError" data-name="libpcap::tcpparseerror">
+      <a href="LibPcap/TCPParseError.html">TCPParseError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/TimeoutError" data-name="libpcap::timeouterror">
+      <a href="LibPcap/TimeoutError.html">TimeoutError</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/UDPHeader" data-name="libpcap::udpheader">
+      <a href="LibPcap/UDPHeader.html">UDPHeader</a>
+      
+    </li>
+  
+  <li class=" " data-id="pcap/LibPcap/UDPParseError" data-name="libpcap::udpparseerror">
+      <a href="LibPcap/UDPParseError.html">UDPParseError</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1><a id="pcap-crystal-bindings-for-libpcap" class="anchor" href="#pcap-crystal-bindings-for-libpcap">  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>pcap – Crystal bindings for libpcap</h1>
+<p><strong>Production‑ready, idiomatic Crystal bindings for the libpcap library</strong> – capture, filter, inject, and read/write pcap files with ease.</p>
+<hr />
+<h2><a id="features" class="anchor" href="#features">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Features</h2>
+<ul>
+<li>✅ <strong>Device enumeration</strong> – list interfaces, addresses, and flags.</li>
+<li>✅ <strong>Live packet capture</strong> – with configurable snap length, promiscuous mode, timeouts, and buffer size.</li>
+<li>✅ <strong>Offline savefile reading</strong> – iterate over packets from pcap/pcapng files.</li>
+<li>✅ <strong>BPF filtering</strong> – compile and apply any Berkeley Packet Filter expression.</li>
+<li>✅ <strong>Packet parsing</strong> – built‑in support for Ethernet, IPv4, TCP, and UDP headers.</li>
+<li>✅ <strong>Savefile writing</strong> – write packets to pcap files (including append mode).</li>
+<li>✅ <strong>Non‑blocking capture</strong> – integrate with event loops via <code>selectable_fd</code>.</li>
+<li>✅ <strong>Timestamp control</strong> – choose precision (micro/nano) and timestamp type (host, adapter, etc.).</li>
+<li>✅ <strong>Packet injection</strong> – send raw packets on the network (requires appropriate privileges).</li>
+<li>✅ <strong>Direction filtering</strong> – capture only incoming/outgoing/both packets.</li>
+<li>✅ <strong>Remote capture</strong> (optional) – capture from rpcap servers (build with <code>-D remote</code>).</li>
+<li>✅ <strong>Linux‑specific protocol headers</strong> (optional) – use <code>-D protocol</code> to enable.</li>
+<li>✅ <strong>Comprehensive error handling</strong> – typed exceptions and a <code>Result(T)</code> monad.</li>
+<li>✅ <strong>RAII resource management</strong> – automatic cleanup via finalizers.</li>
+<li>✅ <strong>Thorough test suite</strong> – 40+ examples, all passing.</li>
+</ul>
+<hr />
+<h2><a id="installation" class="anchor" href="#installation">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Installation</h2>
+<p>Add the shard to your <code>shard.yml</code>:</p>
+<pre><code class="language-yaml">dependencies:
+  pcap:
+    github: OkaVatti/pcap
+    version: ~&gt; 0.1.0</code></pre>
+<p>Then run:</p>
+<pre><code class="language-bash">shards install</code></pre>
+<p>You also need the libpcap development headers installed on your system:</p>
+<ul>
+<li><strong>Debian/Ubuntu</strong>: <code>sudo apt install libpcap-dev</code></li>
+<li><strong>Fedora/RHEL</strong>: <code>sudo dnf install libpcap-devel</code></li>
+<li><strong>Arch Linux</strong>: <code>sudo pacman -S libpcap</code></li>
+<li><strong>macOS</strong> (Homebrew): <code>brew install libpcap</code></li>
+<li><strong>FreeBSD/OpenBSD</strong>: installed by default</li>
+</ul>
+<hr />
+<h2><a id="quick-start" class="anchor" href="#quick-start">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Quick Start</h2>
+<h3><a id="list-available-devices" class="anchor" href="#list-available-devices">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>List available devices</h3>
+<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;pcap&quot;</span>
+
+devices <span class="o">=</span> <span class="t">LibPcap</span><span class="t">::</span><span class="t">Device</span>.all
+devices.each <span class="k">do</span> <span class="o">|</span>dev<span class="o">|</span>
+  puts <span class="s">&quot;</span><span class="i">#{</span>dev.name<span class="i">}</span><span class="s"> (</span><span class="i">#{</span>dev.description<span class="i">}</span><span class="s">)&quot;</span>
+  dev.addresses.each <span class="k">do</span> <span class="o">|</span>addr<span class="o">|</span>
+    <span class="k">if</span> ip <span class="o">=</span> addr.ip_address
+      puts <span class="s">&quot;  IP: </span><span class="i">#{</span>ip<span class="i">}</span><span class="s">&quot;</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre>
+<h3><a id="capture-10-packets-on-the-first-device" class="anchor" href="#capture-10-packets-on-the-first-device">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Capture 10 packets on the first device</h3>
+<pre><code class="language-crystal">device <span class="o">=</span> <span class="t">LibPcap</span><span class="t">::</span><span class="t">Device</span>.all.first
+handle <span class="o">=</span> <span class="t">LibPcap</span><span class="t">::</span><span class="t">PcapHandle</span>.for_live(device)
+handle.snaplen <span class="o">=</span> <span class="n">65536</span>
+handle.promisc <span class="o">=</span> <span class="n">false</span>
+handle.timeout_ms <span class="o">=</span> <span class="n">1000</span>
+handle.activate
+
+handle.loop(count: <span class="n">10</span>) <span class="k">do</span> <span class="o">|</span>packet<span class="o">|</span>
+  puts <span class="s">&quot;Packet: </span><span class="i">#{</span>packet.len<span class="i">}</span><span class="s"> bytes at </span><span class="i">#{</span>packet.timestamp<span class="i">}</span><span class="s">&quot;</span>
+  eth <span class="o">=</span> packet.ethernet
+  puts <span class="s">&quot;  MAC: </span><span class="i">#{</span>eth.src_mac<span class="i">}</span><span class="s"> -&gt; </span><span class="i">#{</span>eth.dst_mac<span class="i">}</span><span class="s">&quot;</span>
+  <span class="k">if</span> ip <span class="o">=</span> packet.ipv4? <span class="c"># optional (returns nil if not IPv4)</span>
+    puts <span class="s">&quot;  IP: </span><span class="i">#{</span>ip.src_ip<span class="i">}</span><span class="s"> -&gt; </span><span class="i">#{</span>ip.dst_ip<span class="i">}</span><span class="s">&quot;</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+handle.close</code></pre>
+<h3><a id="read-a-pcap-file" class="anchor" href="#read-a-pcap-file">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Read a pcap file</h3>
+<pre><code class="language-crystal">reader <span class="o">=</span> <span class="t">LibPcap</span>.open_offline(<span class="s">&quot;capture.pcap&quot;</span>)
+reader.each_packet <span class="k">do</span> <span class="o">|</span>packet<span class="o">|</span>
+  puts <span class="s">&quot;Packet: </span><span class="i">#{</span>packet.len<span class="i">}</span><span class="s"> bytes&quot;</span>
+  <span class="c"># parse as needed...</span>
+<span class="k">end</span>
+reader.close</code></pre>
+<h3><a id="write-a-synthetic-packet-to-a-new-file" class="anchor" href="#write-a-synthetic-packet-to-a-new-file">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Write a synthetic packet to a new file</h3>
+<pre><code class="language-crystal">handle <span class="o">=</span> <span class="t">LibPcap</span><span class="t">::</span><span class="t">PcapHandle</span>.dead(<span class="t">LibPcap</span><span class="t">::</span><span class="t">DLT_EN10MB</span>)
+writer <span class="o">=</span> <span class="t">LibPcap</span><span class="t">::</span><span class="t">SavefileWriter</span>.new(handle, <span class="s">&quot;output.pcap&quot;</span>)
+
+<span class="c"># Build a dummy Ethernet frame</span>
+data <span class="o">=</span> <span class="t">Bytes</span>[<span class="n">0x00</span>, <span class="n">0x11</span>, <span class="n">0x22</span>, <span class="n">0x33</span>, <span class="n">0x44</span>, <span class="n">0x55</span>,  <span class="c"># dst MAC</span>
+             <span class="n">0x66</span>, <span class="n">0x77</span>, <span class="n">0x88</span>, <span class="n">0x99</span>, <span class="n">0xAA</span>, <span class="n">0xBB</span>,  <span class="c"># src MAC</span>
+             <span class="n">0x08</span>, <span class="n">0x00</span>]                           <span class="c"># Ethertype IPv4</span>
+
+now <span class="o">=</span> <span class="t">Time</span>.utc
+tv <span class="o">=</span> <span class="t">LibC</span><span class="t">::</span><span class="t">Timeval</span>.new
+tv.tv_sec <span class="o">=</span> now.to_unix
+tv.tv_usec <span class="o">=</span> now.nanosecond <span class="o">//</span> <span class="n">1000</span>
+
+header <span class="o">=</span> <span class="t">LibPcap</span><span class="t">::</span><span class="t">PcapPkthdr</span>.new(
+  ts: tv,
+  caplen: data.size.to_u32,
+  len: data.size.to_u32
+)
+writer.write(header, data)
+writer.close</code></pre>
+<hr />
+<h2><a id="advanced-usage" class="anchor" href="#advanced-usage">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Advanced Usage</h2>
+<h3><a id="bpf-filtering" class="anchor" href="#bpf-filtering">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>BPF Filtering</h3>
+<pre><code class="language-crystal">handle.filter <span class="o">=</span> <span class="s">&quot;tcp and port 80&quot;</span>
+handle.loop <span class="k">do</span> <span class="o">|</span>packet<span class="o">|</span>
+  <span class="c"># only TCP port 80 packets</span>
+<span class="k">end</span></code></pre>
+<h3><a id="nonblocking-capture-with-selectpoll" class="anchor" href="#nonblocking-capture-with-selectpoll">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Non‑blocking Capture (with select/poll)</h3>
+<pre><code class="language-crystal">handle.nonblock <span class="o">=</span> <span class="n">true</span>
+fd <span class="o">=</span> handle.selectable_fd  <span class="c"># get the file descriptor</span>
+<span class="c"># Use fd with `select`, `epoll`, `kqueue`, etc.</span>
+loop <span class="k">do</span>
+  <span class="c"># wait for readability on fd...</span>
+  handle.dispatch(<span class="n">10</span>) <span class="k">do</span> <span class="o">|</span>packet<span class="o">|</span>
+    <span class="c"># process packet</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre>
+<h3><a id="inject-a-packet" class="anchor" href="#inject-a-packet">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Inject a Packet</h3>
+<pre><code class="language-crystal">data <span class="o">=</span> <span class="t">Bytes</span>[<span class="n">0x00</span>, <span class="n">0x11</span>, ...] <span class="c"># valid Ethernet frame</span>
+handle.inject(data)            <span class="c"># returns number of bytes sent</span>
+<span class="c"># or handle.sendpacket(data)</span></code></pre>
+<h3><a id="choose-timestamp-type" class="anchor" href="#choose-timestamp-type">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Choose Timestamp Type</h3>
+<pre><code class="language-crystal"><span class="c"># List available types</span>
+types <span class="o">=</span> handle.tstamp_types
+<span class="k">if</span> types.includes?(<span class="t">LibPcap</span><span class="t">::</span><span class="t">PCAP_TSTAMP_HOST_HIPREC</span>)
+  handle.tstamp_type <span class="o">=</span> <span class="t">LibPcap</span><span class="t">::</span><span class="t">PCAP_TSTAMP_HOST_HIPREC</span>
+<span class="k">end</span></code></pre>
+<h3><a id="remote-capture-rpcap" class="anchor" href="#remote-capture-rpcap">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Remote Capture (rpcap)</h3>
+<p>Build with <code>-D remote</code> and then:</p>
+<pre><code class="language-crystal">handle <span class="o">=</span> <span class="t">LibPcap</span><span class="t">::</span><span class="t">PcapHandle</span>.for_remote(
+  source: <span class="s">&quot;rpcap://192.168.1.100/eth0&quot;</span>,
+  flags: <span class="t">LibPcap</span><span class="t">::</span><span class="t">PCAP_OPENFLAG_PROMISCUOUS</span>
+)
+handle.loop { <span class="o">|</span>packet<span class="o">|</span> ... }
+handle.close</code></pre>
+<hr />
+<h2><a id="compilation-flags" class="anchor" href="#compilation-flags">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Compilation Flags</h2>
+<p>The library supports optional features that may not be available in all libpcap installations.</p>
+<p>| Flag          | Description                                                   |
+| ------------- | ------------------------------------------------------------- |
+| <code>-D remote</code>   | Enable remote capture functions (<code>pcap_open</code>).                |
+| <code>-D protocol</code> | Enable Linux‑specific protocol setting (<code>pcap_set_protocol</code>). |</p>
+<p>Example:</p>
+<pre><code class="language-bash">shards build --release -D remote -D protocol</code></pre>
+<hr />
+<h2><a id="testing" class="anchor" href="#testing">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Testing</h2>
+<p>Run the full test suite:</p>
+<pre><code class="language-bash">crystal spec</code></pre>
+<p>Some tests require a live network interface. To run them, set:</p>
+<pre><code class="language-bash">TEST_LIVE=1 crystal spec</code></pre>
+<p>If no live device is available, those tests will be skipped gracefully.</p>
+<p>Remote capture tests require a remote server and can be enabled with:</p>
+<pre><code class="language-bash">TEST_REMOTE=1 TEST_REMOTE_SOURCE=rpcap://host/interface crystal spec -D remote</code></pre>
+<hr />
+<h2><a id="documentation" class="anchor" href="#documentation">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Documentation</h2>
+<ul>
+<li><strong>API Reference</strong> – generate with <code>crystal docs</code>. The source code is thoroughly commented.</li>
+<li><strong>User Guide</strong> – see <code>docs/guide.md</code> (in progress).</li>
+<li><strong>Internals</strong> – see <code>docs/internals.md</code> for FFI details.</li>
+</ul>
+<p>We welcome contributions to improve documentation.</p>
+<hr />
+<h2><a id="contributing" class="anchor" href="#contributing">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Contributing</h2>
+<ol>
+<li>Fork the repository.</li>
+<li>Create a feature branch.</li>
+<li>Add your changes with tests.</li>
+<li>Ensure <code>crystal spec</code> passes.</li>
+<li>Submit a pull request.</li>
+</ol>
+<p>Please follow the <a href="https://crystal-lang.org/conduct/">Crystal Code of Conduct</a>.</p>
+<hr />
+<h2><a id="license" class="anchor" href="#license">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>License</h2>
+<p>This project is licensed under the <strong>MIT License</strong> – see the <a href="LICENSE">LICENSE</a> file for details.</p>
+<hr />
+<h2><a id="acknowledgements" class="anchor" href="#acknowledgements">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Acknowledgements</h2>
+<ul>
+<li>The libpcap team for the original C library.</li>
+<li>The Crystal community for an elegant language and ecosystem.</li>
+</ul>
+<hr />
+<p><strong>Happy packet capturing!</strong> 🐧📡</p>
+</div>
+</body>
+</html>
