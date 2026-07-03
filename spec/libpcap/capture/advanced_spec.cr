@@ -1,3 +1,4 @@
+# spec/libpcap/capture/advanced_spec.cr
 require "../../spec_helper"
 
 private def root? : Bool
@@ -94,12 +95,12 @@ describe "Advanced features" do
           handle.nonblock = false
           handle.nonblock?.should be_false
         rescue LibPcap::Error
-          pending "Non‑blocking mode not supported on this device"
+          pending("Non‑blocking mode not supported on this device")
         ensure
           handle.close
         end
       else
-        pending "No live interface available"
+        pending("No live interface available")
       end
     end
 
@@ -109,7 +110,7 @@ describe "Advanced features" do
         begin
           fd = handle.selectable_fd
           if fd.nil?
-            pending "selectable_fd not supported on this device"
+            pending("selectable_fd not supported on this device")
           end
           fd.should_not be_nil
           fd.as(Int32).should be >= 0
@@ -117,7 +118,7 @@ describe "Advanced features" do
           handle.close
         end
       else
-        pending "No live interface available"
+        pending("No live interface available")
       end
     end
 
@@ -139,12 +140,12 @@ describe "Advanced features" do
           handle.direction = LibPcap::PCAP_D_IN
           handle.direction = LibPcap::PCAP_D_OUT
         rescue LibPcap::ConfigurationError
-          pending "Direction control not supported on this device"
+          pending("Direction control not supported on this device")
         ensure
           handle.close
         end
       else
-        pending "No live interface available"
+        pending("No live interface available")
       end
     end
 
@@ -167,7 +168,7 @@ describe "Advanced features" do
         types.should contain(handle.datalink)
         handle.close
       else
-        pending "No live interface available"
+        pending("No live interface available")
       end
     end
 
@@ -209,7 +210,7 @@ describe "Advanced features" do
 
         handle.close
       else
-        pending "No live interface available"
+        pending("No live interface available")
       end
     end
   end
@@ -275,7 +276,7 @@ describe "Advanced features" do
         types.should_not be_empty
         handle.close
       else
-        pending "No live interface available"
+        pending("No live interface available")
       end
     end
 
@@ -293,7 +294,7 @@ describe "Advanced features" do
         end
         handle.close
       else
-        pending "No live interface available"
+        pending("No live interface available")
       end
     end
   end
@@ -310,7 +311,7 @@ describe "Advanced features" do
           end
           handle.close
         else
-          pending "No live interface available"
+          pending("No live interface available")
         end
       end
     end
@@ -370,7 +371,7 @@ describe "Advanced features" do
           handle.should be_a(LibPcap::PcapHandle)
           handle.close
         else
-          pending "Remote capture tests skipped (set TEST_REMOTE=1 and TEST_REMOTE_SOURCE to run)"
+          pending("Remote capture tests skipped (set TEST_REMOTE=1 and TEST_REMOTE_SOURCE to run)")
         end
       end
 
