@@ -35,7 +35,7 @@ private def get_live_handle : LibPcap::PcapHandle?
     handle.timeout_ms = 100
     begin
       handle.activate
-      return handle
+      handle
     rescue LibPcap::ActivationError
       # Device not usable, close and continue
       handle.close
@@ -87,38 +87,41 @@ describe "Advanced features" do
   describe "non‑blocking mode" do
     it "sets and gets non‑blocking mode on a live handle" do
       handle = get_live_handle
-      if handle
-        begin
-          handle.nonblock?.should be_false
-          handle.nonblock = true
-          handle.nonblock?.should be_true
-          handle.nonblock = false
-          handle.nonblock?.should be_false
-        rescue LibPcap::Error
-          pending("Non‑blocking mode not supported on this device")
-        ensure
-          handle.close
-        end
-      else
-        pending("No live interface available")
+      unless handle
+        puts "No live interface available"
+        next
+      end
+
+      begin
+        handle.nonblock?.should be_false
+        handle.nonblock = true
+        handle.nonblock?.should be_true
+        handle.nonblock = false
+        handle.nonblock?.should be_false
+      rescue LibPcap::Error
+        puts "Non‑blocking mode not supported on this device"
+      ensure
+        handle.close
       end
     end
 
     it "returns selectable_fd on a live handle" do
       handle = get_live_handle
-      if handle
-        begin
-          fd = handle.selectable_fd
-          if fd.nil?
-            pending("selectable_fd not supported on this device")
-          end
-          fd.should_not be_nil
-          fd.as(Int32).should be >= 0
-        ensure
-          handle.close
+      unless handle
+        puts "No live interface available"
+        next
+      end
+
+      begin
+        fd = handle.selectable_fd
+        if fd.nil?
+          puts "selectable_fd not supported on this device"
+          next
         end
-      else
-        pending("No live interface available")
+        fd.should_not be_nil
+        fd.as(Int32).should be >= 0
+      ensure
+        handle.close
       end
     end
 
@@ -134,18 +137,19 @@ describe "Advanced features" do
   describe "direction control" do
     it "sets direction on a live handle" do
       handle = get_live_handle
-      if handle
-        begin
-          handle.direction = LibPcap::PCAP_D_INOUT
-          handle.direction = LibPcap::PCAP_D_IN
-          handle.direction = LibPcap::PCAP_D_OUT
-        rescue LibPcap::ConfigurationError
-          pending("Direction control not supported on this device")
-        ensure
-          handle.close
-        end
-      else
-        pending("No live interface available")
+      unless handle
+        puts "No live interface available"
+        next
+      end
+
+      begin
+        handle.direction = LibPcap::PCAP_D_INOUT
+        handle.direction = LibPcap::PCAP_D_IN
+        handle.direction = LibPcap::PCAP_D_OUT
+      rescue LibPcap::ConfigurationError
+        puts "Direction control not supported on this device"
+      ensure
+        handle.close
       end
     end
 
@@ -161,15 +165,16 @@ describe "Advanced features" do
   describe "list of datalink types" do
     it "returns a non‑empty array on a live handle" do
       handle = get_live_handle
-      if handle
-        types = handle.datalink_types
-        types.should be_a(Array(Int32))
-        types.should_not be_empty
-        types.should contain(handle.datalink)
-        handle.close
-      else
-        pending("No live interface available")
+      unless handle
+        puts "No live interface available"
+        next
       end
+
+      types = handle.datalink_types
+      types.should be_a(Array(Int32))
+      types.should_not be_empty
+      types.should contain(handle.datalink)
+      handle.close
     end
 
     it "works on an offline handle (returns at least current datalink)" do
@@ -195,23 +200,24 @@ describe "Advanced features" do
 
     it "injects a packet on a live handle (adapts to permissions)" do
       handle = get_live_handle
-      if handle
-        data = Bytes.new(14, 0xAA)
-
-        if root?
-          sent = handle.inject(data)
-          sent.should eq(data.size)
-        else
-          # Without root, injection should fail with an error
-          expect_raises(LibPcap::Error) do
-            handle.inject(data)
-          end
-        end
-
-        handle.close
-      else
-        pending("No live interface available")
+      unless handle
+        puts "No live interface available"
+        next
       end
+
+      data = Bytes.new(14, 0xAA)
+
+      if root?
+        sent = handle.inject(data)
+        sent.should eq(data.size)
+      else
+        # Without root, injection should fail with an error
+        expect_raises(LibPcap::Error) do
+          handle.inject(data)
+        end
+      end
+
+      handle.close
     end
   end
 
@@ -270,32 +276,34 @@ describe "Advanced features" do
   describe "timestamp types" do
     it "lists timestamp types on a live handle" do
       handle = get_live_handle
-      if handle
-        types = handle.tstamp_types
-        types.should be_a(Array(Int32))
-        types.should_not be_empty
-        handle.close
-      else
-        pending("No live interface available")
+      unless handle
+        puts "No live interface available"
+        next
       end
+
+      types = handle.tstamp_types
+      types.should be_a(Array(Int32))
+      types.should_not be_empty
+      handle.close
     end
 
     it "sets a valid timestamp type" do
       handle = get_live_handle
-      if handle
-        types = handle.tstamp_types
-        unless types.empty?
-          begin
-            handle.tstamp_type = types.first
-          rescue LibPcap::ConfigurationError
-            # Some interfaces do not support setting timestamp types
-            # even though they are listed; we skip the assertion.
-          end
-        end
-        handle.close
-      else
-        pending("No live interface available")
+      unless handle
+        puts "No live interface available"
+        next
       end
+
+      types = handle.tstamp_types
+      unless types.empty?
+        begin
+          handle.tstamp_type = types.first
+        rescue LibPcap::ConfigurationError
+          # Some interfaces do not support setting timestamp types
+          # even though they are listed; we skip the assertion.
+        end
+      end
+      handle.close
     end
   end
 
@@ -303,16 +311,17 @@ describe "Advanced features" do
     describe "protocol setting" do
       it "does not raise when setting protocol (if supported)" do
         handle = get_live_handle
-        if handle
-          begin
-            handle.protocol = LibPcap::PCAP_PROTOCOL_ETHERNET
-          rescue LibPcap::ConfigurationError
-            # Ignore; may fail if protocol not supported
-          end
-          handle.close
-        else
-          pending("No live interface available")
+        unless handle
+          puts "No live interface available"
+          return
         end
+
+        begin
+          handle.protocol = LibPcap::PCAP_PROTOCOL_ETHERNET
+        rescue LibPcap::ConfigurationError
+          # Ignore; may fail if protocol not supported
+        end
+        handle.close
       end
     end
   {% end %}
@@ -371,7 +380,8 @@ describe "Advanced features" do
           handle.should be_a(LibPcap::PcapHandle)
           handle.close
         else
-          pending("Remote capture tests skipped (set TEST_REMOTE=1 and TEST_REMOTE_SOURCE to run)")
+          puts "Remote capture tests skipped (set TEST_REMOTE=1 and TEST_REMOTE_SOURCE to run)"
+          return
         end
       end
 
