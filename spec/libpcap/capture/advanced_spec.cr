@@ -47,7 +47,7 @@ private def get_live_handle : LibPcap::PcapHandle?
     handle.snaplen = 65536
     handle.timeout_ms = 100
     handle.activate
-    return handle
+    handle
   rescue
     # No usable interface found
     nil
